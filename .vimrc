@@ -31,6 +31,8 @@ set wildmenu
 set wildmode=list:longest
 set title
 
+filetype plugin on
+
 if has("gui_running")
   set guioptions-=T "No toolbar in gvim
 endif
