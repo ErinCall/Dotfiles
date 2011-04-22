@@ -1,6 +1,7 @@
 set -o noclobber
 
 . ~/.bashrc_sources/git-completion.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 alias vb='vim ~/.bashrc'
 alias sb='. ~/.bashrc'
