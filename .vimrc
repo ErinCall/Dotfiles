@@ -49,6 +49,7 @@ map! ,# ,#
 map ,conf mxvi{<Esc>j%o<Esc>0iuse Carp; local $SIG{__DIE__} = \&confess;<Esc>'x
 map ,dp ouse Data::Dumper; warn Dumper ;<Esc>i
 map ,sp :set paste!<Cr>
+map <silent> ,wt :%s/\s\+$<Cr>
 nmap <silent> ,t :w<Cr>:!clear<Cr>:!prove -lrv %<Cr>
 
 map <silent> <C-N> :set hlsearch!<CR>
