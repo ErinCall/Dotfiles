@@ -1,6 +1,10 @@
 set -o noclobber
 
+export PATH=/usr/local/bin/:$PATH
 . ~/.bashrc_sources/git-completion.sh
+. ~/.bashrc_sources/perlbrew-setup.sh
+. ~/.bashrc_sources/virtualenv-setup.sh
+export PATH=~/bin:$PATH
 
 if [ -f ~/.bashrc_sources/local.sh ]; then
     . ~/.bashrc_sources/local.sh
@@ -40,9 +44,6 @@ alias 5..='cd ../../../../..'
 alias 6..='cd ../../../../../..'
 
 export PS1='\n[1;33m\j[1;31m§[1;35m\h[1;31m§[0;32m\w/[0;37m $(__git_ps1 "(%s)")[1;37m\n§ '
-
-export PERLBREW_ROOT=~/.perlbrew
-export PATH=~/bin:$PERLBREW_ROOT/bin:$PERLBREW_ROOT/perls/current/bin/:/usr/local/bin/:$PATH
 
 export EDITOR='mvim -f'
 export PAGER=less
