@@ -30,6 +30,7 @@ set scrolloff=10
 set wildmenu
 set wildmode=list:longest
 set title
+set colorcolumn=80
 
 if has("gui_running")
   set guioptions-=T "No toolbar in gvim
