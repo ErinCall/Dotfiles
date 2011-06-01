@@ -2,6 +2,10 @@ set -o noclobber
 
 . ~/.bashrc_sources/git-completion.sh
 
+if [ -f ~/.bashrc_sources/local.sh ]; then
+    . ~/.bashrc_sources/local.sh
+fi
+
 alias vb='vim ~/.bashrc'
 alias sb='. ~/.bashrc'
 alias notepad='rlwrap -ir cat - > /dev/null #'
