@@ -36,7 +36,7 @@ if has("gui_running")
   set guioptions-=T "No toolbar in gvim
 endif
 
-map ,gd :w<Cr>:!git diff % <cr>
+map ,gd :w<Cr>:!git dif % <cr>
 map ,b :BufExplorer<cr>
 map ,o o<Esc>
 map ,O O<Esc>
