@@ -43,7 +43,8 @@ alias 4..='cd ../../../..'
 alias 5..='cd ../../../../..'
 alias 6..='cd ../../../../../..'
 
-export PS1='\n[1;33m\j[1;31m§[1;35m\h[1;31m§[0;32m\w/[0;37m $(__git_ps1 "(%s)")[1;37m\n§ '
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+export PS1='\n[1;33m\j[1;31m§[1;35m\h[1;31m§[0;32m\w/[0;37m$(current_virtualenv)$(__git_ps1 " (%s)")[1;37m\n§ '
 
 export EDITOR='mvim -f'
 export PAGER=less

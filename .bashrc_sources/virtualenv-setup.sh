@@ -5,3 +5,10 @@ export PIP_RESPECT_VIRTUALENV=true
 export PATH=/usr/local/share/python/:$PATH
 
 source /usr/local/share/python/virtualenvwrapper.sh
+
+function current_virtualenv {
+    env=`echo $VIRTUAL_ENV | ack -o '\w+$'`
+    if [ $env ]; then
+        echo ' ['$env']'
+    fi
+}
