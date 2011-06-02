@@ -59,5 +59,5 @@ highlight StatusLine ctermfg=darkblue ctermbg=grey
 set statusline=[%n]\ %.200F\ %(\ %M%R%H)%)\ \@(%l\,%c%V)\ %P
 set laststatus=2        " always show status line
 
-map ,v :sp ~/.vimrc<CR><C-W>_
-map <silent> ,V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+map ,v :sp ~/.gvimrc<CR><C-W>_:vs ~/.vimrc<Cr>
+map <silent> ,V :source ~/.vimrc<CR>:source ~/.gvimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
