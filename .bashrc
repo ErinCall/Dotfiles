@@ -9,10 +9,7 @@ export PATH=~/bin:$PATH
 
 [[ -s ~/.bashrc_sources/local.sh ]] && source ~/.bashrc_sources/local.sh
 
-function vb {
-    which mvim && vim=mvim || vim=vim
-    $vim ~/.bashrc
-}
+alias vb="$EDITOR ~/.bashrc"
 alias sb='. ~/.bashrc'
 alias notepad='rlwrap -ir cat - > /dev/null #'
 alias steve=jobs
@@ -48,7 +45,7 @@ alias 6..='cd ../../../../../..'
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export PS1='\n[1;33m\j[1;31m§[1;35m\h[1;31m§[0;32m\w/[0;37m$(current_virtualenv)$(__git_ps1 " (%s)")[1;37m\n§ '
 
-export EDITOR='mvim -f'
+which mvim &>/dev/null && EDITOR='mvim -f -c "au VimLeave * !open -a iTerm"' || EDITOR=vim
 export PAGER=less
 export LESS=-FRX
 
