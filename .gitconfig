@@ -1,0 +1,30 @@
+[color]
+    ui = auto
+
+[pager]
+    color = true
+
+[status]
+    submodulesummary = true
+
+[rerere]
+    enabled = true
+
+[diff]
+    noprefix = true
+
+[alias]
+    lg = "log --pretty=format:'%C(yellow)%h%Creset %s %Cblue%d%Creset' --graph"
+    plog = !git lg
+    dif = "diff -p --stat --no-prefix --patience -M -C -C"
+    sho = "show -p --stat --no-prefix --patience -M -C -C"
+
+[color "status"]
+    changed = yellow
+    header =
+[help]
+    autocorrect = 14
+[core]
+	excludesfile = ~/.global-gitignore
+[push]
+	default = current
