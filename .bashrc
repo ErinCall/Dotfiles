@@ -9,7 +9,10 @@ export PATH=~/bin:$PATH
 
 [[ -s ~/.bashrc_sources/local.sh ]] && source ~/.bashrc_sources/local.sh
 
-alias vb='vim ~/.bashrc'
+function vb {
+    which mvim && vim=mvim || vim=vim
+    $vim ~/.bashrc
+}
 alias sb='. ~/.bashrc'
 alias notepad='rlwrap -ir cat - > /dev/null #'
 alias steve=jobs
