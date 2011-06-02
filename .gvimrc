@@ -1,2 +1,3 @@
 set colorcolumn=80
-colorscheme desert
+colorscheme torte
+set transparency=15
