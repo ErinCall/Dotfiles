@@ -7,9 +7,7 @@ export PATH=/usr/local/bin/:$PATH
 . ~/.bashrc_sources/virtualenv-setup.sh
 export PATH=~/bin:$PATH
 
-if [ -f ~/.bashrc_sources/local.sh ]; then
-    . ~/.bashrc_sources/local.sh
-fi
+[[ -s ~/.bashrc_sources/local.sh ]] && source ~/.bashrc_sources/local.sh
 
 alias vb='vim ~/.bashrc'
 alias sb='. ~/.bashrc'
