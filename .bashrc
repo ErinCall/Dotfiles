@@ -5,6 +5,7 @@ export PATH=/usr/local/bin/:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 . ~/.bashrc_sources/perlbrew-setup.sh
 . ~/.bashrc_sources/virtualenv-setup.sh
+. ~/.bashrc_sources/git-configuration.sh
 export PATH=~/bin:$PATH
 
 [[ -s ~/.bashrc_sources/local.sh ]] && source ~/.bashrc_sources/local.sh
@@ -13,21 +14,6 @@ alias vb="$EDITOR ~/.bashrc"
 alias sb='. ~/.bashrc'
 alias notepad='rlwrap -ir cat - > /dev/null #'
 alias steve=jobs
-
-function grugrhom {
-    MASTER=${1:-origin/master}
-    git remote update && git reset --hard $MASTER
-}
-function glorm {
-    MASTER=${1:-master}
-    git log --oneline --reverse $MASTER..
-}
-alias glorom='glorm origin/master'
-function grieve {
-    MASTER=${1:-master}
-    git log -p --reverse --stat --no-prefix $MASTER..
-}
-alias grieveom='grieve origin/master'
 
 alias      ..='cd ..'
 alias     ...='cd ../..'
@@ -44,6 +30,7 @@ alias 6..='cd ../../../../../..'
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export PS1='\n[1;33m\j[1;31m§[1;35m\h[1;31m§[0;32m\w/[0;37m$(current_virtualenv)$(__git_ps1 " (%s)")[1;37m\n§ '
+export GIT_PS1_SHOWDIRTYSTATE=1
 
 which mvim &>/dev/null && EDITOR='mvim -f -c "au VimLeave * !open -a iTerm"' || EDITOR=vim
 export PAGER=less
@@ -54,7 +41,5 @@ export LS_COLORS="no=00:fi=00:di=01;36:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd
 # BSD systems including Darwin
 export CLICOLOR=1
 export LSCOLORS="Eafxcxdxbxegedabagacad"
-
-export GIT_PS1_SHOWDIRTYSTATE=1
 
 umask u=rwx,g=rwx,o=rx
