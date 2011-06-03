@@ -13,7 +13,7 @@ export PATH=~/bin:$PATH
 alias vb="$EDITOR ~/.bashrc"
 alias sb='. ~/.bashrc'
 alias notepad='rlwrap -ir cat - > /dev/null #'
-alias steve=jobs
+alias read_silently="perl -MTerm::ReadKey -e 'ReadMode(q[noecho]); while (<>) {}; ReadMode(0)'"
 
 alias      ..='cd ..'
 alias     ...='cd ../..'
