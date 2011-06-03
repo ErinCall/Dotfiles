@@ -50,6 +50,11 @@ map ,conf mxvi{<Esc>j%o<Esc>0iuse Carp; local $SIG{__DIE__} = \&confess;<Esc>'x
 map ,dp ouse Data::Dumper; warn Dumper ;<Esc>i
 map ,sp :set paste!<Cr>
 map <silent> ,wt :%s/\s\+$<Cr>
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 map <silent> <C-N> :set hlsearch!<CR>
 
