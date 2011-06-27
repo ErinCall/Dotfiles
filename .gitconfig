@@ -23,7 +23,7 @@
     changed = yellow
     header =
 [help]
-    autocorrect = 14
+    autocorrect = 12
 [core]
 	excludesfile = ~/.global-gitignore
 [push]
