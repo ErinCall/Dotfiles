@@ -15,4 +15,3 @@ function grieve {
 }
 alias grieveom='grieve origin/master'
 
-which opendiff &>/dev/null && export GIT_EXTERNAL_DIFF=~/bin/git-opendiff.sh
