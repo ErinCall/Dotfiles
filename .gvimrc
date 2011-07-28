@@ -11,3 +11,4 @@ autocmd BufWinLeave * call clearmatches()
 colorscheme torte
 set transparency=15
 set guifont=Monaco:h12
+set guioptions-=T "No toolbar in gvim

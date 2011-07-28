@@ -33,10 +33,6 @@ set title
 
 filetype plugin on
 
-if has("gui_running")
-  set guioptions-=T "No toolbar in gvim
-endif
-
 map ,gd :w<Cr>:!git dif % <cr>
 map ,b :BufExplorer<cr>
 map ,o o<Esc>
