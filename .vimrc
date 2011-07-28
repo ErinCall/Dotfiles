@@ -14,7 +14,7 @@ set expandtab
 set ts=4
 set sw=4
 set ai
-set incsearch
+set incsearch " move the screen to matching search results as you are typing the search
 set ignorecase
 set smartcase
 set nohlsearch
