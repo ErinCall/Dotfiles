@@ -1,11 +1,7 @@
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd ColorScheme * highlight HardTabs ctermbg=red guibg=red
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match HardTabs /\t/
-autocmd InsertEnter * match HardTabs /\t/
-autocmd InsertLeave * match HardTabs /\t/
+autocmd ColorScheme * highlight BadWhitespace ctermbg=red guibg=red
+autocmd BufWinEnter * match BadWhitespace /\s\+$\|\t/
+autocmd InsertEnter * match BadWhitespace /\s\+\%#\@<!$\|\t/
+autocmd InsertLeave * match BadWhitespace /\s\+$\|\t/
 autocmd BufWinLeave * call clearmatches()
 
 colorscheme torte
