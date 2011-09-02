@@ -18,6 +18,7 @@
     plog = !git lg
     dif = "diff -p --stat --no-prefix --patience -M -C -C"
     sho = "show -p --stat --no-prefix --patience -M -C -C --ext-diff"
+	praise = blame
 
 [color "status"]
     changed = yellow
