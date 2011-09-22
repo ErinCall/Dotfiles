@@ -1,0 +1,3 @@
+[submodule ".bashrc_sources/externals/git-vim"]
+	path = .bashrc_sources/externals/git-vim
+	url = https://github.com/motemen/git-vim.git

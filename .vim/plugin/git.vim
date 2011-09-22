@@ -1,0 +1,1 @@
+/Users/alorente/.bashrc_sources/externals/git-vim/plugin/git.vim

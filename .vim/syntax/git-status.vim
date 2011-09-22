@@ -1,0 +1,1 @@
+/Users/alorente/.bashrc_sources/externals/git-vim/syntax/git-status.vim
