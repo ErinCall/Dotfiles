@@ -13,6 +13,8 @@ export PATH=~/bin:$PATH
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export PS1='\n[1;33m\j[1;31m§[1;35m\h[1;31m§[0;32m\w/[0;37m$(current_virtualenv)$(__git_ps1 " (%s)")[1;37m\n§ '
 export GIT_PS1_SHOWDIRTYSTATE=1
+export NOSE_REDNOSE=1
+export NOSE_REDNOSE_COLOR='force'
 
 which mvim &>/dev/null && EDITOR='mvim -f -c "au VimLeave * !open -a iTerm"' || EDITOR=vim
 export PAGER=less
