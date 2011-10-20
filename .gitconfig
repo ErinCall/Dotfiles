@@ -19,6 +19,7 @@
     dif = "diff -p --stat --no-prefix --patience -M -C -C"
     sho = "show -p --stat --no-prefix --patience -M -C -C --ext-diff"
 	praise = blame
+	checkotu = checkout
 
 [color "status"]
     changed = yellow
