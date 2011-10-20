@@ -44,6 +44,9 @@ nmap ,# I#<Esc>
 map! ,# ,#
 map ,conf mxvi{<Esc>j%o<Esc>0iuse Carp; local $SIG{__DIE__} = \&confess;<Esc>'x
 map ,dp ouse Data::Dumper; warn Dumper ;<Esc>i
+nmap ,eq V:s/assert /eq_(<Cr>:'<,'>s/\s*==\s*/, <Cr>:'<,'>s/$/)<Cr>
+vmap ,eq :s/assert /eq_(<Cr>:'<,'>s/\s*==\s*/, <Cr>:'<,'>s/$/)<Cr>
+map! ,eq ,eq
 map ,sp :set paste!<Cr>
 map <silent> ,wt :%s/\s\+$<Cr>
 map <silent> ,aao :%s/\t/    /g<Cr>
