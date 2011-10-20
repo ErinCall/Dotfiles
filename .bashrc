@@ -6,6 +6,7 @@ export PATH=/usr/local/bin:$PATH
 . ~/.bashrc_sources/perlbrew-setup.sh
 . ~/.bashrc_sources/virtualenv-setup.sh
 . ~/.bashrc_sources/git-configuration.sh
+. ~/.bashrc_sources/externals/scm_breeze/scm_breeze.sh
 export PATH=~/bin:$PATH
 
 [[ -s ~/.bashrc_sources/local.sh ]] && source ~/.bashrc_sources/local.sh

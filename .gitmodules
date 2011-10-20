@@ -1,3 +1,6 @@
 [submodule ".bashrc_sources/externals/git-vim"]
 	path = .bashrc_sources/externals/git-vim
 	url = https://github.com/motemen/git-vim.git
+[submodule "/Users/alorente/.bashrc_sources/externals/scm_breeze"]
+	path = /Users/alorente/.bashrc_sources/externals/scm_breeze
+	url = git://github.com/ndbroadbent/scm_breeze.git
