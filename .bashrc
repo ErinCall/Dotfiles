@@ -18,6 +18,12 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export NOSE_REDNOSE=1
 export NOSE_REDNOSE_COLOR='force'
 
+export GIT_AUTHOR_NAME='Andrew Lorente'
+export GIT_AUTHOR_EMAIL='andrew.lorente@gmail.com'
+
+export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
+export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
+
 which mvim &>/dev/null && EDITOR='mvim -f -c "au VimLeave * !open -a iTerm"' || EDITOR=vim
 export PAGER=less
 export LESS=-FRX

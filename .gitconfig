@@ -30,6 +30,3 @@
 	excludesfile = ~/.global-gitignore
 [push]
 	default = current
-[user]
-	name = Andrew Lorente
-	email = andrew.lorente@gmail.com
