@@ -14,4 +14,7 @@ function grieve {
     git log -p --reverse --stat --no-prefix $MASTER..
 }
 alias grieveom='grieve origin/master'
-
+function gap {
+    path=${1:-.}
+    git add -p $path
+}
