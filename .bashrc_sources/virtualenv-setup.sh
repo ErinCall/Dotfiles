@@ -9,7 +9,7 @@ if [ -s /usr/local/share/python/virtualenvwrapper.sh ]; then
 fi
 
 function current_virtualenv {
-    env=`echo $VIRTUAL_ENV | ack -o '\w+$'`
+    env=`echo $VIRTUAL_ENV | ack -o '[a-zA-Z\-]+$'`
     if [ $env ]; then
         echo ' ['$env']'
     fi
