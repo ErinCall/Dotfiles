@@ -14,7 +14,7 @@
     noprefix = true
 
 [alias]
-    lg = "log --pretty=format:'%C(yellow)%h%Creset %s %Cblue%d%Creset' --graph"
+    lg = "log --pretty=format:'%C(yellow)%h%Creset %s %C(blue)%d%C(reset) %C(green)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --graph"
     plog = !git lg
     dif = "diff -p --stat --no-prefix --patience -M -C -C"
     sho = "show -p --stat --no-prefix --patience -M -C -C --ext-diff"
