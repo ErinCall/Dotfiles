@@ -1,8 +1,9 @@
 #!/bin/bash
 
-function grugrhom {
-    MASTER=${1:-origin/master}
-    git remote update && git reset --hard $MASTER
+function grug {
+    remote=${1:-origin}
+    branch=${2:-master}
+    git fetch $remote && git reset --hard $remote/$branch
 }
 
 function glorm {
