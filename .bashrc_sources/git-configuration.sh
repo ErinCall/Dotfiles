@@ -2,7 +2,7 @@
 
 function grug {
     remote=${1:-origin}
-    branch=${2:-master}
+    branch=${2:-`git name-rev --name-only HEAD`}
     git fetch $remote && git reset --hard $remote/$branch
 }
 
