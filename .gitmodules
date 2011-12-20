@@ -4,3 +4,6 @@
 [submodule ".bashrc_sources/externals/scm_breeze"]
 	path = .bashrc_sources/externals/scm_breeze
 	url = git://github.com/ndbroadbent/scm_breeze.git
+[submodule ".bashrc_sources/externals/pullme"]
+	path = .bashrc_sources/externals/pullme
+	url = git@github.com:AndrewLorente/Pullme.git
