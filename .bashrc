@@ -24,7 +24,8 @@ export GIT_AUTHOR_EMAIL='andrew.lorente@gmail.com'
 export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
 export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 
-which mvim &>/dev/null && EDITOR='mvim -f -c "au VimLeave * !open -a iTerm"' || EDITOR=vim
+alias mvimf="mvim -f -c 'au VimLeave * !open -a iTerm'" 
+export EDITOR=vim
 export PAGER=less
 export LESS=-FRX
 
