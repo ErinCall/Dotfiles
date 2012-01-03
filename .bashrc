@@ -5,6 +5,7 @@ export PATH=/usr/local/bin:$PATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 . ~/.bashrc_sources/perlbrew-setup.sh
 . ~/.bashrc_sources/virtualenv-setup.sh
+. ~/.bashrc_sources/rvm-setup.sh
 . ~/.bashrc_sources/git-configuration.sh
 . ~/.bashrc_sources/externals/scm_breeze/scm_breeze.sh
 . ~/.bashrc_sources/scm_breeze-configuration.sh
@@ -13,7 +14,7 @@ export PATH=~/bin:$PATH
 [[ -s ~/.bashrc_sources/local.sh ]] && source ~/.bashrc_sources/local.sh
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-export PS1='\n[1;33m\j[1;31m§[1;35m\h[1;31m§[0;32m\w/[0;37m$(current_virtualenv)$(__git_ps1 " (%s)")[1;37m\n§ '
+export PS1='\n[1;33m\j[1;31m§[1;35m\h[1;31m§[0;32m\w/[0;37m$(current_virtualenv)$(current_gemset)$(__git_ps1 " (%s)")[1;37m\n§ '
 export GIT_PS1_SHOWDIRTYSTATE=1
 export NOSE_REDNOSE=1
 export NOSE_REDNOSE_COLOR='force'
