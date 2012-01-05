@@ -1,5 +1,5 @@
 if [ ! $GEM_HOME ]; then
-    rvm use 1.9.2
+    which rvm &>/dev/null && rvm use 1.9.2
 fi
 
 function current_gemset {
