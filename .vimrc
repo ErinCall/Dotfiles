@@ -32,6 +32,7 @@ set wildmode=list:longest
 set title
 
 filetype plugin on
+autocmd BufNewFile,BufWinEnter Gemfile set filetype=ruby
 
 map ,gd :w<Cr>:!git dif % <cr>
 map ,b :BufExplorer<cr>
