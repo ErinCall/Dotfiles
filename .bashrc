@@ -10,6 +10,7 @@ export PATH=/usr/local/bin:$PATH
 . ~/.bashrc_sources/externals/scm_breeze/scm_breeze.sh
 . ~/.bashrc_sources/scm_breeze-configuration.sh
 export PATH=~/bin:$PATH
+export PATH=bin:$PATH
 
 [[ -s ~/.bashrc_sources/local.sh ]] && source ~/.bashrc_sources/local.sh
 
