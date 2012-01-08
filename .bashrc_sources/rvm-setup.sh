@@ -4,3 +4,5 @@ function current_gemset {
         echo ' {'$gemset'}'
     fi
 }
+
+alias ber='bundle exec rake'
