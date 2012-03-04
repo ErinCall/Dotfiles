@@ -1,4 +1,4 @@
-git pull https://AndrewLorente@github.com/AndrewLorente/Dotfiles.git master
+git pull origin master
 
 . ~/.bashrc
 
