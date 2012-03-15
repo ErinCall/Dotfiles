@@ -12,6 +12,11 @@ export PATH=/usr/local/bin:$PATH
 export PATH=~/bin:$PATH
 export PATH=bin:$PATH
 
+export GIT_AUTHOR_NAME='Andrew Lorente'
+export GIT_AUTHOR_EMAIL='andrew.lorente@gmail.com'
+export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
+export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
+
 [[ -s ~/.bashrc_sources/local.sh ]] && source ~/.bashrc_sources/local.sh
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -19,12 +24,6 @@ export PS1='\n[1;33m\j[1;31m§[1;35m\h[1;31m§[0;32m\w/[0;37m$(current_vir
 export GIT_PS1_SHOWDIRTYSTATE=1
 export NOSE_REDNOSE=1
 export NOSE_REDNOSE_COLOR='force'
-
-export GIT_AUTHOR_NAME='Andrew Lorente'
-export GIT_AUTHOR_EMAIL='andrew.lorente@gmail.com'
-
-export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
-export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 
 alias mvimf="mvim -f -c 'au VimLeave * !open -a iTerm'" 
 export EDITOR=vim
