@@ -1,4 +1,4 @@
-autocmd ColorScheme * highlight BadWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight BadWhitespace ctermbg=darkgray guibg=darkgray
 autocmd BufWinEnter * match BadWhitespace /\s\+$\|\t/
 autocmd InsertEnter * match BadWhitespace /\s\+\%#\@<!$\|\t/
 autocmd InsertLeave * match BadWhitespace /\s\+$\|\t/
