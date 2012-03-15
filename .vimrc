@@ -33,6 +33,7 @@ set title
 
 filetype plugin on
 autocmd BufNewFile,BufWinEnter Gemfile set filetype=ruby
+autocmd BufNewFile,BufWinEnter *.json set filetype=javascript
 
 map ,gd :w<Cr>:!git dif % <cr>
 map ,b :BufExplorer<cr>
