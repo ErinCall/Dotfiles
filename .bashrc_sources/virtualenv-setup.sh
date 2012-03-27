@@ -3,7 +3,7 @@ if [ -s /usr/local/bin/virtualenvwrapper.sh ]; then
     export WORKON_HOME=~/Envs
     export PIP_VIRTUALENV_BASE=$WORKON_HOME
     export PIP_RESPECT_VIRTUALENV=true
-    export PATH=/usr/local/share/python/:$PATH
+    export PATH=/usr/local/share/python:$PATH
 
     source /usr/local/bin/virtualenvwrapper.sh
 fi
