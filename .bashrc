@@ -2,7 +2,6 @@ set -o noclobber
 
 export PATH=/usr/local/bin:$PATH
 . ~/.bashrc_sources/git-completion.sh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 . ~/.bashrc_sources/perlbrew-setup.sh
 . ~/.bashrc_sources/virtualenv-setup.sh
 . ~/.bashrc_sources/rvm-setup.sh
