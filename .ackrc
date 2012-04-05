@@ -1,1 +1,4 @@
 --type-set=css=.css,.scss
+--type-add
+js=json
+--ignore-dir=build
