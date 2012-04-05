@@ -54,6 +54,14 @@ map <silent> ,wt :%s/\s\+$<Cr>
 map <silent> ,aao :%s/\t/    /g<Cr>
 map <silent> <C-N> :set hlsearch!<CR>
 
+"surround visual selection with paired characters. Thanks akr!
+vmap ,( <ESC>`>a)<ESC>`<i(<ESC>
+vmap ,< <ESC>`>a><ESC>`<i<<ESC>
+vmap ," <ESC>`>a"<ESC>`<i"<ESC>
+vmap ,' <ESC>`>a'<ESC>`<i'<ESC>
+vmap ,{ <ESC>`>a}<ESC>`<i{<ESC>
+vmap ,[ <ESC>`>a]<ESC>`<i[<ESC>
+
 set bg=dark
 syntax on
 
