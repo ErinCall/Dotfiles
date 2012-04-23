@@ -17,7 +17,7 @@ function do_python() {
 }
 
 function current_virtualenv {
-    env=`echo $VIRTUAL_ENV | ack -o '[a-zA-Z\-]+$'`
+    env=`echo $VIRTUAL_ENV | ack -o '[a-zA-Z\-_]+$'`
     if [ $env ]; then
         echo ' ['$env']'
     fi
