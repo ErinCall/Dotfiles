@@ -1,12 +1,18 @@
 function do_python() {
-    if [ -s /usr/local/bin/virtualenvwrapper.sh ]; then
+    if [ ! $VIRTUALENVWRAPPER_LOCATION ]; then
+        $VIRTUALENVWRAPPER_LOCATION = /usr/local/share/virtualenvwrapper.sh
+    fi
+    if [ -s $VIRTUALENVWRAPPER_LOCATION ]; then
         export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
         export WORKON_HOME=~/Envs
         export PIP_VIRTUALENV_BASE=$WORKON_HOME
         export PIP_RESPECT_VIRTUALENV=true
         export PATH=/usr/local/share/python:$PATH
 
-        source /usr/local/bin/virtualenvwrapper.sh
+        source $VIRTUALENVWRAPPER_LOCATION
+    else
+        echo "Couldn't find $VIRTUALENVWRAPPER_LOCATION"
+        return 1
     fi
 }
 
