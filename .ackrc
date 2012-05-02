@@ -1,4 +1,4 @@
 --type-set=css=.css,.scss
---type-add
-js=json
+--type-set=js=.js,.json,.coffee
 --ignore-dir=build
+--ignore-dir=node_modules
