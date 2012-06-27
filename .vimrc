@@ -31,7 +31,8 @@ set wildmenu
 set wildmode=list:longest
 set title
 
-filetype plugin on
+call pathogen#infect()
+filetype plugin indent on
 autocmd BufNewFile,BufWinEnter Gemfile set filetype=ruby
 autocmd BufNewFile,BufWinEnter *.json set filetype=javascript
 

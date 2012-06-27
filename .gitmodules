@@ -7,3 +7,6 @@
 [submodule ".bashrc_sources/externals/pullme"]
 	path = .bashrc_sources/externals/pullme
 	url = git@github.com:AndrewLorente/Pullme.git
+[submodule ".bashrc_sources/externals/syntastic"]
+	path = .bashrc_sources/externals/syntastic
+	url = https://github.com/scrooloose/syntastic.git
