@@ -30,3 +30,5 @@
 	excludesfile = ~/.global-gitignore
 [push]
 	default = current
+[pullme]
+	personal = alorente
