@@ -1,6 +1,6 @@
 function do_python() {
     if [ ! $VIRTUALENVWRAPPER_LOCATION ]; then
-        $VIRTUALENVWRAPPER_LOCATION = /usr/local/share/virtualenvwrapper.sh
+        VIRTUALENVWRAPPER_LOCATION=/usr/local/share/virtualenvwrapper.sh
     fi
     if [ -s $VIRTUALENVWRAPPER_LOCATION ]; then
         export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
