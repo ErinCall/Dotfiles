@@ -1,3 +1,4 @@
+export PATH=/usr/local/share/python:$PATH
 function do_python() {
     if [ ! $VIRTUALENVWRAPPER_LOCATION ]; then
         VIRTUALENVWRAPPER_LOCATION=/usr/local/share/virtualenvwrapper.sh
@@ -7,7 +8,6 @@ function do_python() {
         export WORKON_HOME=~/Envs
         export PIP_VIRTUALENV_BASE=$WORKON_HOME
         export PIP_RESPECT_VIRTUALENV=true
-        export PATH=/usr/local/share/python:$PATH
 
         source $VIRTUALENVWRAPPER_LOCATION
     else
