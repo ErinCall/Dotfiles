@@ -14,6 +14,11 @@ function do_python() {
         echo "Couldn't find $VIRTUALENVWRAPPER_LOCATION"
         return 1
     fi
+    # osx Lion has been causing me weird problems in mkvirtualenv:
+    # distutils.errors.DistutilsPlatformError: $MACOSX_DEPLOYMENT_TARGET
+    # mismatch: now "10.4" but "10.7" during configure
+    # exporting this prevents those problems
+    export MACOSX_DEPLOYMENT_TARGET=`osx_version.py`
 }
 
 function current_virtualenv {
