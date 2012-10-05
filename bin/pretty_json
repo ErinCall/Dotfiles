@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+
+import json
+import sys
+import quopri
+
+def pretty_print(blob):
+    try:
+        print prettify(blob)
+    except ValueError:
+        blob = quopri.decodestring(blob)
+        try:
+            print prettify(blob)
+        except ValueError:
+            blob = blob.replace('=>', ':')
+            print prettify(blob)
+
+def prettify(blob):
+    return json.dumps(json.loads(blob), indent=4)
+
+
+if len(sys.argv) > 1:
+    for filename in sys.argv[1:]:
+        with open(filename, 'r') as fh:
+            pretty_print(fh.read())
+else:
+    pretty_print(sys.stdin.read())
+
