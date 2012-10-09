@@ -10,3 +10,6 @@
 [submodule ".bashrc_sources/externals/syntastic"]
 	path = .bashrc_sources/externals/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule ".bashrc_sources/externals/vim-fugitive"]
+	path = .bashrc_sources/externals/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
