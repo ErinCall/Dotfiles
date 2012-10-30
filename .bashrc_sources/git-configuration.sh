@@ -15,7 +15,9 @@ alias glorom='glorm origin/master'
 
 function grieve {
     MASTER=${1:-master}
-    git log -p --reverse --stat --no-prefix $MASTER..
+    TOPIC=${2:-HEAD}
+    shift 2
+    git log -p --reverse --stat --no-prefix $MASTER..$TOPIC $@
 }
 alias grieveom='grieve origin/master'
 
