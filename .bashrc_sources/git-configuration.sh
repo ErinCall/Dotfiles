@@ -19,7 +19,7 @@ function grieve {
 }
 alias grieveom='grieve origin/master'
 
-alias gap &>/dev/null || unalias gap #this may've came in from scm_breeze but I want my own
+alias gap &>/dev/null && unalias gap #this may've came in from scm_breeze but I want my own
 function gap {
     path=${1:-.}
     git add -p `git_expand_args $path`
