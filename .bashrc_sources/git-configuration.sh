@@ -9,7 +9,8 @@ function grug {
 
 function glorm {
     MASTER=${1:-master}
-    git log --oneline --reverse $MASTER..
+    shift 1
+    git log --oneline --reverse $MASTER.. $@
 }
 alias glorom='glorm origin/master'
 
