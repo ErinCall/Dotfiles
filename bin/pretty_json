@@ -12,7 +12,9 @@ def pretty_print(blob):
         try:
             print prettify(blob)
         except ValueError:
+            #maybe the blob isn't json at all...maybe it's a json-serializable ruby data structure
             blob = blob.replace('=>', ':')
+            blob = blob.replace('nil', 'null')
             print prettify(blob)
 
 def prettify(blob):
