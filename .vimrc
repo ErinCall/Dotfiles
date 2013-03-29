@@ -31,6 +31,7 @@ set wildmenu
 set wildmode=list:longest
 set title
 
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 call pathogen#infect()
 filetype plugin indent on
 autocmd BufNewFile,BufWinEnter Gemfile set filetype=ruby
