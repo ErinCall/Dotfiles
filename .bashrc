@@ -9,6 +9,7 @@ export PATH=/usr/local/bin:$PATH
 . ~/.bashrc_sources/git-configuration.sh
 . ~/.bashrc_sources/scm_breeze-configuration.sh
 export PATH=~/bin:$PATH
+export PATH=~/.cabal/bin:$PATH
 export PATH=bin:$PATH
 
 export GIT_AUTHOR_NAME='Andrew Lorente'
