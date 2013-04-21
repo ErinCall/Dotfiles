@@ -44,3 +44,18 @@ function gcot {
       return 1
     fi
 }
+
+function glone {
+    repo=$1
+    local_name=${2}
+    if [ ! $local_name ]; then
+        local_name=`echo $repo | perl -pe 's{.*?([^/]*)/?$}{$1}'`
+    fi
+    if [ $repo ]; then
+        git clone $repo
+        cd $local_name
+    else
+        echo "You need to give me a repo"
+        return 1
+    fi
+}
