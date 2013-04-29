@@ -46,6 +46,22 @@ function gcot {
     fi
 }
 
+function gt {
+    ticket=$1
+    if [ $ticket ]; then
+        branch=`git branch | sed s/.// | ack $ticket`
+        if [ $branch ]; then
+            echo $branch
+        else
+            echo "no branch found for $ticket" >&2
+            return 2
+        fi
+    else
+        echo "You need to give me a ticket" >&2
+        return 1
+    fi
+}
+
 function glone {
     repo=$1
     local_name=${2}
