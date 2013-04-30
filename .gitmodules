@@ -16,3 +16,6 @@
 [submodule ".bashrc_sources/externals/ctrlp"]
 	path = .bashrc_sources/externals/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule ".bashrc_sources/externals/vim-easymotion"]
+	path = .bashrc_sources/externals/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
