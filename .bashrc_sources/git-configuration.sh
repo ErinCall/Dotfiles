@@ -9,8 +9,9 @@ function grug {
 
 function glorm {
     MASTER=${1:-master}
-    shift 1
-    git log --oneline --reverse $MASTER.. $@
+    TOPIC=${2:-HEAD}
+    shift 2
+    git log --oneline --reverse $MASTER..$TOPIC $@
 }
 alias glorom='glorm origin/master'
 
@@ -42,6 +43,22 @@ function gcot {
     else
       echo "You need to give me a ticket"
       return 1
+    fi
+}
+
+function gt {
+    ticket=$1
+    if [ $ticket ]; then
+        branch=`git branch | sed s/.// | ack $ticket`
+        if [ $branch ]; then
+            echo $branch
+        else
+            echo "no branch found for $ticket" >&2
+            return 2
+        fi
+    else
+        echo "You need to give me a ticket" >&2
+        return 1
     fi
 }
 
