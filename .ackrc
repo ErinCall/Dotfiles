@@ -1,4 +1,5 @@
 --type-set=css=.css,.scss
 --type-set=js=.js,.json,.coffee
+--type-set=jinja=.jinja
 --ignore-dir=build
 --ignore-dir=node_modules
