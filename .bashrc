@@ -25,10 +25,14 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export NOSE_REDNOSE=1
 export NOSE_REDNOSE_COLOR='force'
 
-alias mvimf="mvim -f -c 'au VimLeave * !open -a iTerm'" 
+alias mvimf="mvim -f -c 'au VimLeave * !open -a iTerm'"
 export EDITOR=vim
 export PAGER=less
 export LESS=-FRX
+
+if [ -x `which gsed 2>/dev/null` ]; then
+	alias sed=gsed
+fi
 
 alias vb="$EDITOR ~/.bashrc"
 alias sb='. ~/.bashrc'
