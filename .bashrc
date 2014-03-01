@@ -30,7 +30,8 @@ export EDITOR=vim
 export PAGER=less
 export LESS=-FRX
 
-if [ -x `which gsed 2>/dev/null` ]; then
+gsed=$(which gsed)
+if [ -x "$gsed" ]; then
 	alias sed=gsed
 fi
 
