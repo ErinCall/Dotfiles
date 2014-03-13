@@ -13,7 +13,7 @@ export PATH=~/.cabal/bin:$PATH
 export PATH=bin:$PATH
 
 export GIT_AUTHOR_NAME='Andrew Lorente'
-export GIT_AUTHOR_EMAIL='andrew.lorente@gmail.com'
+export GIT_AUTHOR_EMAIL='hello@andrewlorente.com'
 export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
 export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 
