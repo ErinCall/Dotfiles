@@ -76,3 +76,5 @@ function glone {
         return 1
     fi
 }
+
+alias cb="git symbolic-ref HEAD 2>/dev/null | sed 's|refs/heads/||'"
