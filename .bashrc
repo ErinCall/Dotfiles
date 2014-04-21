@@ -61,5 +61,6 @@ export LS_COLORS="no=00:fi=00:di=01;36:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd
 # BSD systems including Darwin
 export CLICOLOR=1
 export LSCOLORS="Eafxcxdxbxegedabagacad"
+export HISTCONTROL=ignorespaces:$HISTCONTROL
 
 umask u=rwx,g=rwx,o=rx
