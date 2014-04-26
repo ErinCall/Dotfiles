@@ -1,4 +1,3 @@
-export PATH=/usr/local/share/python:$PATH
 function do_python() {
     if [ ! $VIRTUALENVWRAPPER_LOCATION ]; then
         VIRTUALENVWRAPPER_LOCATION=/usr/local/bin/virtualenvwrapper.sh
