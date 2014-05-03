@@ -4,6 +4,7 @@ export PATH=/usr/local/bin:$PATH
 . ~/.bashrc_sources/git-completion.sh
 . ~/.bashrc_sources/perlbrew-setup.sh
 . ~/.bashrc_sources/virtualenv-setup.sh
+. ~/.bashrc_sources/ghci-setup.sh
 . ~/.bashrc_sources/rvm-setup.sh
 . ~/.bashrc_sources/externals/scm_breeze/scm_breeze.sh
 . ~/.bashrc_sources/git-configuration.sh
