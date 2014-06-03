@@ -36,6 +36,10 @@ if [ -x "$gsed" ]; then
 	alias sed=gsed
 fi
 
+if [ -x "$(which aws)" ]; then
+    complete -C aws_completer aws
+fi
+
 alias vb="$EDITOR ~/.bashrc"
 alias sb='. ~/.bashrc'
 alias notepad='rlwrap -ir cat - > /dev/null #'
