@@ -3,4 +3,5 @@
 --type-set=jinja=.jinja
 --type-set=heist=.tpl
 --ignore-dir=build
+--type-set=markdown=.md,.mkd,.markdown,.mmd,.pdc
 --ignore-dir=node_modules
