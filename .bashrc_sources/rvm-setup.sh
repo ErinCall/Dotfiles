@@ -1,4 +1,4 @@
-export DEFAULT_RVM_RUBY=1.9.2
+export DEFAULT_RVM_RUBY=2.1.2
 [[ -d ~/.rvm/bin ]] && export PATH=$PATH:~/.rvm/bin
 function do_ruby {
     [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
