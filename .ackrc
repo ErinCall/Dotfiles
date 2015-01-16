@@ -1,5 +1,6 @@
 --type-set=css=.css,.scss
 --type-set=js=.js,.json,.coffee
+--type-set=javascript=.js,.json,.coffee
 --type-set=jinja=.jinja
 --type-set=heist=.tpl
 --ignore-dir=build
