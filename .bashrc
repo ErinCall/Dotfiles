@@ -27,6 +27,16 @@ export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 
 [[ -s ~/.bashrc_sources/local.sh ]] && source ~/.bashrc_sources/local.sh
 
+# kill -0 checks to see if the pid exists
+if test -f $HOME/.gpg-agent-info && kill -0 `cut -d: -f 2 $HOME/.gpg-agent-info` 2>/dev/null; then
+    GPG_AGENT_INFO=`cat $HOME/.gpg-agent-info | cut -c 16-`
+else
+# No, gpg-agent not available; start gpg-agent
+    eval `gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info`
+fi
+export GPG_TTY=`tty`
+export GPG_AGENT_INFO
+
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export PS1="\n\[$(tput bold)\]\[$(tput setaf 3)\]\j\[$(tput setaf 1)\]§\[$(tput setaf 5)\]\h\[$(tput setaf 1)\]§\[$(tput setaf 2)\]\w\[$(tput sgr0)\]\$(current_virtualenv)\$(current_gemset)\$(__git_ps1 \" (%s)\")\n\[$(tput bold)\]\[$(tput setaf 7)\]§ \[$(tput sgr0)\]"
 export GIT_PS1_SHOWDIRTYSTATE=1
