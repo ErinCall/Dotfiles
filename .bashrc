@@ -70,6 +70,10 @@ alias now="date -u '+%Y%m%d%H%M%S'"
 
 alias sep='echo "[1;34m################################################################################[0;37m"'
 
+if [ -x "$(which ipconfig)" ]; then
+    alias localip="ifconfig -l | tr ' ' '\n' | xargs -I{} ipconfig getifaddr {}"
+fi
+
 alias      ..='cd ..'
 alias     ...='cd ../..'
 alias    ....='cd ../../..'
@@ -90,6 +94,7 @@ export LS_COLORS="no=00:fi=00:di=01;36:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd
 # BSD systems including Darwin
 export CLICOLOR=1
 export LSCOLORS="Eafxcxdxbxegedabagacad"
+
 export HISTCONTROL=ignorespace:$HISTCONTROL
 
 umask u=rwx,g=rwx,o=rx
