@@ -20,8 +20,8 @@ export PATH=~/.cabal/bin:$PATH
 export PATH=node_modules/.bin:$PATH
 export PATH=bin:$PATH
 
-export GIT_AUTHOR_NAME='Andrew Lorente'
-export GIT_AUTHOR_EMAIL='hello@andrewlorente.com'
+export GIT_AUTHOR_NAME='Erin Call'
+export GIT_AUTHOR_EMAIL='hello@erincall.com'
 export GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME
 export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 
