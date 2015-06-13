@@ -67,6 +67,7 @@ alias sb='. ~/.bashrc'
 alias notepad='rlwrap -ir cat - > /dev/null #'
 alias read_silently="perl -MTerm::ReadKey -e 'ReadMode(q[noecho]); while (<>) {}; ReadMode(0)'"
 alias now="date -u '+%Y%m%d%H%M%S'"
+alias ll='ls -l'
 
 alias sep='echo "[1;34m################################################################################[0;37m"'
 
