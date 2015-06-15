@@ -1,0 +1,60 @@
+#!/usr/local/bin/python
+
+import re
+import sys
+import requests
+
+INVALID_INVOCATION = 1
+NOT_FOUND          = 2
+UNEXPECTED_ERROR   = 3
+
+def main(language):
+    language = normalize(language)
+    response = requests.get('https://raw.githubusercontent.com/github/gitignore/master/{0}.gitignore'.format(language))
+    if response.status_code == 200:
+        with open('.gitignore', 'w') as fh:
+            fh.write(response.text)
+            print('Done.')
+    elif response.status_code == 404:
+        sys.stderr.write("""
+Couldn't find a gitignore for {language}. Try browsing https://github.com/github/gitignore/tree/master.
+Note that language names are case-sensitive.
+""".format(language=language))
+        sys.exit(NOT_FOUND)
+    else:
+        sys.stderr.write("""
+Encountered an unexpected error response from GitHub: HTTP {status_code} {status_message}.
+The response body was:
+
+{response_text}
+""".format(status_code=response.status_code, status_message=response.reason, response_text=response.text[:512]))
+        sys.exit(UNEXPECTED_ERROR)
+
+def normalize(language):
+    if language[0].islower():
+        language = language[0].upper() + language[1:]
+    language = language.replace('.gitignore', '')
+
+    return language
+
+def usage(code=0):
+    sys.stderr.write("""
+Usage: gitignore LANGUAGE
+
+Fetch the .gitignore defined by GitHub for LANGUAGE to the current directory.
+
+Flags:
+    -h, --help      Display this help message.
+""")
+    sys.exit(code)
+
+if __name__ == '__main__':
+    try:
+        language = sys.argv[1]
+    except IndexError:
+        usage(INVALID_INVOCATION)
+
+    if language == '--help' or language == '-h':
+        usage()
+
+    main(language)
