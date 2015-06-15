@@ -11,7 +11,7 @@ export PATH=/usr/local/bin:$PATH
 . ~/.bashrc_sources/perlbrew-setup.sh
 . ~/.bashrc_sources/virtualenv-setup.sh
 . ~/.bashrc_sources/ghci-setup.sh
-. ~/.bashrc_sources/rvm-setup.sh
+. ~/.bashrc_sources/rbenv-setup.sh
 . ~/.bashrc_sources/externals/scm_breeze/scm_breeze.sh
 . ~/.bashrc_sources/git-configuration.sh
 . ~/.bashrc_sources/scm_breeze-configuration.sh
@@ -38,7 +38,7 @@ export GPG_TTY=`tty`
 export GPG_AGENT_INFO
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-export PS1="\n\[$(tput bold)\]\[$(tput setaf 3)\]\j\[$(tput setaf 1)\]§\[$(tput setaf 5)\]\h\[$(tput setaf 1)\]§\[$(tput setaf 2)\]\w\[$(tput sgr0)\]\$(current_virtualenv)\$(current_gemset)\$(__git_ps1 \" (%s)\")\n\[$(tput bold)\]\[$(tput setaf 7)\]§ \[$(tput sgr0)\]"
+export PS1="\n\[$(tput bold)\]\[$(tput setaf 3)\]\j\[$(tput setaf 1)\]§\[$(tput setaf 5)\]\h\[$(tput setaf 1)\]§\[$(tput setaf 2)\]\w\[$(tput sgr0)\]\$(current_virtualenv)\$(__git_ps1 \" (%s)\")\n\[$(tput bold)\]\[$(tput setaf 7)\]§ \[$(tput sgr0)\]"
 export GIT_PS1_SHOWDIRTYSTATE=1
 export NOSE_REDNOSE=1
 export NOSE_REDNOSE_COLOR='force'
