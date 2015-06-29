@@ -45,11 +45,12 @@ export NOSE_REDNOSE_COLOR='force'
 
 alias mvimf="mvim -f -c 'au VimLeave * !open -a iTerm'"
 export EDITOR=vim
-
 subl=$(which subl 2>/dev/null)
 if [ -x "$subl" ]; then
-    export EDITOR='subl -w'
+    export EDITOR='subl --wait --new-window'
 fi
+unset subl
+
 export PAGER=less
 export LESS=-FRX
 
