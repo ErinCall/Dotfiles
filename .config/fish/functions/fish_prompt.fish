@@ -16,7 +16,11 @@ function fish_prompt --description "Erin's cool prompt"
 	echo (prompt_pwd) | tr -d '\n'
 	set_color normal
 
-	printf ' %s ' (git_prompt)
+	printf ' %s' (git_prompt)
+
+	if set -q VIRTUAL_ENV
+	    echo -n -s " [" (basename "$VIRTUAL_ENV") "]"
+	end
 
 	if not test $last_status -eq 0
 		set_color $fish_color_error
