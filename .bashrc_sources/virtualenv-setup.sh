@@ -26,3 +26,7 @@ function current_virtualenv {
         echo ' ['$env']'
     fi
 }
+
+if [[ -n "$(which pyenv 2>/dev/null)" ]]; then
+    eval "$(pyenv init -)"
+fi
