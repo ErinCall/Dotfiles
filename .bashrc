@@ -1,8 +1,10 @@
 set -o noclobber
 shopt -s cdspell    # attempt to correct typos when cd'ing
-shopt -s checkhash  # if a hashed command is not found, run a path search for it
-  # this is espcially useful because of adding `bin` to my path below--if I cd out of, say, /usr,
-  # a command that was in ./bin may be no longer available and need to be re-discovered.
+shopt -s checkhash  # if a hashed command is not found, run a path search for
+                    # it. This is espcially useful because of adding `bin` to
+                    # $PATH below--if I cd out of, say, /usr, a command that
+                    # was in ./bin may be no longer available and need to be
+                    # re-discovered.
 shopt -s histappend # append to .bash_history, instead of clobbering it
 shopt -s histreedit # prompt to retry failed history substitutions
 
