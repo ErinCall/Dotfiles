@@ -2,3 +2,5 @@
 .DS_Store
 *.pyc
 .pullmeconfig
+.python-version
+.ruby-version
