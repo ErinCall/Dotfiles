@@ -9,8 +9,12 @@ function fish_prompt --description "Erin's cool prompt"
 	set_color -o yellow # should this be a $fish_color_jobs?
 	jobs | wc -l | sed 's/ //g' | tr -d '\n'
 
-	set_color -o red
-	echo -n "§"
+	if test $last_status -eq 0
+		echo -n "😃  "
+	else
+		echo -n "😩  "
+	end
+
 
 	set_color $fish_color_cwd
 	echo (prompt_pwd) | tr -d '\n'
@@ -20,10 +24,6 @@ function fish_prompt --description "Erin's cool prompt"
 
 	if set -q VIRTUAL_ENV
 	    echo -n -s " [" (basename "$VIRTUAL_ENV") "]"
-	end
-
-	if not test $last_status -eq 0
-		set_color $fish_color_error
 	end
 
 	echo
