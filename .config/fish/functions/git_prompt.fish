@@ -1,5 +1,8 @@
 function git_prompt
     set -l gitdir (git rev-parse --git-dir ^/dev/null)
+    if [ $status != 0 ]
+        return
+    end
     set -l rebasing     ''
     set -l branch       ''
     set -l outstanding  ''
