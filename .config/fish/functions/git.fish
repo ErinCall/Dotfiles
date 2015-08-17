@@ -9,6 +9,7 @@ function git
 
     for arg in $argv
         if begin
+            # is $arg a number, and small enough to be an index of $c?
             echo $arg | grep '^\d*$' >/dev/null ^&1
             and math $arg '<=' (count $c) >/dev/null
         end
@@ -27,6 +28,9 @@ function git
         set -l state starting
         for line in $status_output
             switch $line
+            case '  (use "*' 'no changes added*' # Ignore these lines outright
+            case 'On branch*' '' 'Your branch is*' # Passthroughs
+                echo $line
             case 'Changes to be committed*' # state-change indicator
                 echo $line
                 set state staged
@@ -36,9 +40,6 @@ function git
             case 'Untracked files*' # state-change indicator
                 echo $line
                 set state untracked
-            case '  (use "*' # who needs these?? Not I
-            case 'On branch*' '' 'Your branch is*' 'no changes added*' # unaffected by state and do not affect state
-                echo $line
             case '*' # inspect state and do some magic
                 # split the line into the label ("deleted", "modified",
                 # etc.) and the filename. Untracked files don't have a label,
@@ -54,6 +55,10 @@ function git
                     set filename (echo $line | sed -E 's/^\s+//')
                 end
 
+                # determine the color to use for displaying this line's
+                # filename(s). I could do something fancy here, with asking
+                # git about its status output, but instead I'm just hardcoding
+                # my own preferences. (•_•) ( •_•)>⌐■-■ (⌐■_■)
                 set -l file_color
                 switch $state
                 case staged
@@ -66,6 +71,10 @@ function git
 
                 switch $label
                 case '*renamed:*'
+                    # renamed files need additional processing, to put an
+                    # index next to both the old and new filenames. The
+                    # processing here will break in the inappropriate case
+                    # that either of the names contains ' -> '.
                     set -l old (echo $filename | sed 's/ -> .*//')
                     set -l new (echo $filename | sed 's/.* -> //')
                     echo -n $label'['(contains -i $old $c)'] '
@@ -78,6 +87,9 @@ function git
                     set_color normal
                     echo ''
                 case '*'
+                    # The label contains all the necessary whitespace/padding.
+                    # `contains -i` prints the index at which the given value
+                    # can be found in the given list.
                     echo -n $label'['(contains -i $filename $c)'] '
                     set_color $file_color
                     echo -n $filename
