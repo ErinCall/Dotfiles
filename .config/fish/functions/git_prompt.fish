@@ -30,8 +30,8 @@ function git_prompt
             set rebasing "|BISECTING"
         end
 
-        set branch (git symbolic-ref HEAD 2>/dev/null;
-                    or echo (cut -c1-7 .git/HEAD 2>/dev/null)...)
+        set branch (git symbolic-ref HEAD ^/dev/null;
+                    or echo (cut -c1-7 .git/HEAD ^/dev/null)...)
         set branch (echo $branch | sed 's:refs/heads/::')
     end
 
