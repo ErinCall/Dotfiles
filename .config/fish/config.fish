@@ -73,16 +73,16 @@ function potentially_notify \
          --description 'display a notification when a command finishes, if it took more than 20 seconds to run'
     set -l last_status $status
     set -l command_ended (date +%s)
-
-    set -l good_messages 😏 👏 🙌 😘 👻 🎉 🙏 😎 🍩 👌 🌟 🎊 ✨
-    set -l bad_messages 😤 😒 😧 💔 🔥 ❌ 😱 😰 😨 😩 😵 😡 😖
     set -l message_icon
 
-    if math $command_ended - $command_started '>' 20 > /dev/null
+    if begin
+        math $command_ended - $command_started '>' 20 > /dev/null
+        and which terminal-notifier > /dev/null
+    end
         if [ $last_status = 0 ]
-            set message_icon (_select_one $good_messages)
+            set message_icon (_one_of 😏 👏 🙌 😘 👻 🎉 🙏 😎 🍩 👌 🌟 🎊 ✨)
         else
-            set message_icon (_select_one $bad_messages)
+            set message_icon (_one_of 😤 😒 😧 💔 🔥 ❌ 😱 😰 😨 😩 😵 😡 😖)
         end
 
         terminal-notifier -title "$message_icon $argv[1]" \
@@ -90,7 +90,7 @@ function potentially_notify \
     end
 end
 
-function _select_one
+function _one_of
     set idx (math (random) '%' (count $argv) + 1)
     echo $argv[$idx]
 end
