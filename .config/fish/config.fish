@@ -60,6 +60,8 @@ alias gc 'git commit'
 alias ga 'git add'
 alias gap 'git add --patch'
 
+alias cb 'git symbolic-ref HEAD ^/dev/null | sed "s:refs/heads/::"'
+
 function set_start_time \
          --on-event fish_preexec \
          --description 'note the epoch-time when each command started'
