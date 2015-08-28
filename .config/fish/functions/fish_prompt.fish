@@ -10,9 +10,9 @@ function fish_prompt --description "Erin's cool prompt"
 	jobs | wc -l | sed 's/ //g' | tr -d '\n'
 
 	if test $last_status -eq 0
-		echo -n "😃  "
+		echo -n (one_of $success_icons) " "
 	else
-		echo -n "😩  "
+		echo -n (one_of $failure_icons) " "
 	end
 
 

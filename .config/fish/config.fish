@@ -62,6 +62,9 @@ alias gap 'git add --patch'
 
 alias cb 'git symbolic-ref HEAD ^/dev/null | sed "s:refs/heads/::"'
 
+set -g success_icons 😏 👏 🙌 😘 👻 🎉 🙏 😎 🍩 👌 🌟 🎊 ✨
+set -g failure_icons 😤 😒 😧 💔 🔥 ❌ 😱 😰 😨 😩 😵 😡 😖
+
 function set_start_time \
          --on-event fish_preexec \
          --description 'note the epoch-time when each command started'
@@ -80,19 +83,14 @@ function potentially_notify \
         and which terminal-notifier > /dev/null
     end
         if [ $last_status = 0 ]
-            set message_icon (_one_of 😏 👏 🙌 😘 👻 🎉 🙏 😎 🍩 👌 🌟 🎊 ✨)
+            set message_icon (one_of $success_icons)
         else
-            set message_icon (_one_of 😤 😒 😧 💔 🔥 ❌ 😱 😰 😨 😩 😵 😡 😖)
+            set message_icon (one_of $failure_icons)
         end
 
         terminal-notifier -title "$message_icon $argv[1]" \
                           -message "`$argv` completed."
     end
-end
-
-function _one_of
-    set idx (math (random) '%' (count $argv) + 1)
-    echo $argv[$idx]
 end
 
 # GNU systems
