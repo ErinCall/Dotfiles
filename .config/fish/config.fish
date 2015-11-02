@@ -42,7 +42,7 @@ alias now "date -u '+%Y%m%d%H%M%S'"
 alias ll 'ls -l'
 
 if [ -x (which ipconfig) ]
-    alias localip "ifconfig -l | tr ' ' '\n' | xargs -I{} ipconfig getifaddr {}"
+    alias localip "ifconfig -l | tr ' ' '\n' | xargs -I'{}' ipconfig getifaddr '{}'"
 end
 
 alias     ... 'cd ../..'
