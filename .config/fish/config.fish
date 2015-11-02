@@ -40,6 +40,7 @@ alias sb ". ~/.config/fish/config.fish"
 alias read_silently "perl -MTerm::ReadKey -e 'ReadMode(q[noecho]); while (<>) {}; ReadMode(0)'"
 alias now "date -u '+%Y%m%d%H%M%S'"
 alias ll 'ls -l'
+alias glorom 'glorm origin/master'
 
 if [ -x (which ipconfig) ]
     alias localip "ifconfig -l | tr ' ' '\n' | xargs -I'{}' ipconfig getifaddr '{}'"
@@ -57,7 +58,6 @@ alias gd 'git dif'
 alias gdc 'git dif --cached'
 alias gs 'git status'
 alias gc 'git commit'
-alias ga 'git add'
 alias gap 'git add --patch'
 
 alias cb 'git symbolic-ref HEAD ^/dev/null | sed "s:refs/heads/::"'
