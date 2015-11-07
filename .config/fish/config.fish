@@ -3,6 +3,9 @@ set PATH ~/bin $PATH
 set PATH node_modules/.bin $PATH
 set PATH bin $PATH
 
+set PATH $HOME/.rbenv/shims $PATH
+rbenv rehash >/dev/null ^&1
+
 eval (python -m virtualfish)
 
 set -g -x GIT_AUTHOR_NAME 'Erin Call'
