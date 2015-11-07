@@ -6,5 +6,5 @@ function grieve
     set -q argv[2]; and set topic $argv[2]; or set topic 'HEAD'
     set -q argv[3]; and set argv $argv[3..-1]; or set argv
 
-    git log -p --reverse --stat --no-prefix $master..$topic $argv
+    git log --color --patch --reverse --stat --no-prefix $master..$topic $argv | less --pattern '^commit|^diff'
 end
