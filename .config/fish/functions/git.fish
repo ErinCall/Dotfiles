@@ -11,7 +11,7 @@ function git
     for arg in $argv
         if begin
             # is $arg a number, and small enough to be an index of $c?
-            echo $arg | grep -E '^\d+$' >/dev/null ^&1
+            echo $arg | egrep '^[0-9]+$' >/dev/null ^&1
             and math $arg '<=' (count $c) >/dev/null
         end
             set translated_argv $translated_argv $c[$arg]
