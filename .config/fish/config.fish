@@ -27,8 +27,8 @@ set -g -x NOSE_REDNOSE_COLOR 'force'
 
 alias mvimf "mvim -f -c 'au VimLeave * !open -a iTerm'"
 set -g -x EDITOR vim
-if [ -x (which subl) ]
-    set EDITOR 'subl --wait --new-window'
+if [ -x (which atom) ]
+    set EDITOR 'atom --wait --new-window'
 end
 
 set -g -x PAGER 'less'
