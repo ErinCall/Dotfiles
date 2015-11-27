@@ -1,3 +1,3 @@
 function edit_function
-  exec $EDITOR (printf "~/.config/fish/functions/%s" $argv)
+  eval $EDITOR (printf "~/.config/fish/functions/%s.fish" $argv)
 end
