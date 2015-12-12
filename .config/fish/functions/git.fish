@@ -1,12 +1,13 @@
 function git
     set -l translated_argv
+
+    if math (count $argv) '<' 1 >/dev/null
+        return command git
+    end
+
     # TODO: this won't detect commands with e.g. `git --git-dir ...`
     set -l cmd $argv[1]
-    if math (count $argv) '>' 1 >/dev/null
-        set argv $argv[2..-1]
-    else
-        set argv
-    end
+    set -e argv[1]
 
     for arg in $argv
         if begin
