@@ -99,6 +99,8 @@ function _staged_status_line
     case R; echo -n '   renamed'
     case C; echo -n '    copied'
     case T; echo -n 'typechange'
+    # U is actually "unmerged." Can non-conflict cases cause a U?
+    case U; echo -n '  conflict'
     case ' ' '\?'
     case '*' # unknown state!?
         echo -n '         '$state
@@ -117,6 +119,8 @@ function _unstaged_status_line
     case M; echo -n '  modified'
     case D; echo -n '   deleted'
     case T; echo -n 'typechange'
+    # U is actually "unmerged." Can non-conflict cases cause a U?
+    case U; echo -n '  conflict'
     case ' ' '\?'
     case '*' # unknown state!
     echo -n '         '$state
