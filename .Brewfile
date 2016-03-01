@@ -8,3 +8,6 @@ brew 'gpg'
 brew 'gpg-agent'
 brew 'tree'
 brew 'wget'
+brew 'heroku-toolbelt'
+
+cask 'vagrant'
