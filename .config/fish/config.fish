@@ -34,10 +34,6 @@ end
 set -g -x PAGER 'less'
 set -g -x LESS '-FRX'
 
-if [ -x (which gsed) ]
-    alias sed 'gsed'
-end
-
 alias vb $EDITOR" ~/.config/fish/config.fish"
 alias sb ". ~/.config/fish/config.fish"
 alias read_silently "perl -MTerm::ReadKey -e 'ReadMode(q[noecho]); while (<>) {}; ReadMode(0)'"
