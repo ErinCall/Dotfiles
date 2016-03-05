@@ -9,5 +9,6 @@ brew 'gpg-agent'
 brew 'tree'
 brew 'wget'
 brew 'heroku-toolbelt'
+brew 'jq'
 
 cask 'vagrant'
