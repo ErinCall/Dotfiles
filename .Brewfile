@@ -10,5 +10,7 @@ brew 'tree'
 brew 'wget'
 brew 'heroku-toolbelt'
 brew 'jq'
+brew 'python'
 
 cask 'vagrant'
+
