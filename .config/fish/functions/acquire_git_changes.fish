@@ -11,7 +11,7 @@ function acquire_git_changes
     set -l unstaged_files
     for line in (command git status --short)
         switch (echo $line | _first_character)
-        case M D R A # staged files: Modified, Deleted, Renamed, or Added
+        case M D R C A # staged files: Modified, Deleted, Renamed, Copied, or Added
             set staged_files $staged_files $line
         case '*'
             set unstaged_files $unstaged_files $line
@@ -20,10 +20,10 @@ function acquire_git_changes
 
     for line in $staged_files $unstaged_files
         switch (echo $line | _first_character)
-        case 'R' # 'R' in a short-status indicates a staged renamed file. In
-                 # this case we have two filenames to think about. This code
-                 # will break in the inexcusable case that the old filename
-                 # contained ' -> '.
+        case R C # 'R' in a short-status indicates a staged renamed file. 'C'
+                 # is a staged copied file. In both cases we have two
+                 # filenames to think about. This code will break in the
+                 # inexcusable case that the old filename contained ' -> '.
             for file in (echo $line | sed 's/^...//' | sed 's/ -> /\n/')
                 set c $c $file
             end
