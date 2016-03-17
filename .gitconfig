@@ -1,5 +1,10 @@
 [color]
     ui = auto
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
 
 [pager]
     color = true
@@ -27,6 +32,7 @@
     autocorrect = 12
 [core]
 	excludesfile = ~/.global-gitignore
+	pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [push]
 	default = current
 [pullme]
