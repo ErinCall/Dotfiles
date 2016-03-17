@@ -16,7 +16,10 @@ function git
             and math $arg '<=' (count $c) >/dev/null
         end
             set translated_argv $translated_argv $c[$arg]
-        ## TODO: elsif here for n..m format
+        # is $arg a fish array slice?
+        # TODO: bounds checking here maybe? It's obnoxiously long-winded
+        else if echo $arg | egrep '^[0-9]+\.\.[0-9]+$' >/dev/null ^&1
+            set translated_argv $translated_argv $c[$arg]
         else
             set translated_argv $translated_argv $arg
         end
