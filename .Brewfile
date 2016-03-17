@@ -11,6 +11,7 @@ brew 'wget'
 brew 'heroku-toolbelt'
 brew 'jq'
 brew 'python'
+brew 'colordiff'
 
 cask 'vagrant'
 
