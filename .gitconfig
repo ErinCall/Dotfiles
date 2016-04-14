@@ -37,7 +37,5 @@
 	default = current
 [pullme]
 	personal = ecall
-[user]
-	signingkey = 15B8DAD1
 [commit]
 	gpgsign = true
