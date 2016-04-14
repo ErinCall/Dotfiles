@@ -12,6 +12,8 @@ brew 'heroku-toolbelt'
 brew 'jq'
 brew 'python'
 brew 'colordiff'
+brew 'ghc'
+brew 'cabal-install'
 
 cask 'vagrant'
 
