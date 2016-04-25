@@ -24,6 +24,7 @@
     dif = "diff -p --stat --no-prefix --patience -M -C -C"
     sho = "show -p --stat --no-prefix --patience -M -C -C --ext-diff"
 	praise = blame
+    stache = !git -c commit.gpgsign=false stash
 
 [color "status"]
     changed = yellow
