@@ -14,6 +14,7 @@ brew 'python'
 brew 'colordiff'
 brew 'ghc'
 brew 'cabal-install'
+brew 'htop'
 
 cask 'vagrant'
 
