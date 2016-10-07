@@ -2,7 +2,8 @@ function git
     set -l translated_argv
 
     if math (count $argv) '<' 1 >/dev/null
-        return command git
+        command git
+        return $status
     end
 
     # TODO: this won't detect commands with e.g. `git --git-dir ...`
