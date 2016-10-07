@@ -35,20 +35,22 @@ function git_prompt
         set branch (echo $branch | sed 's:refs/heads/::')
     end
 
-    if test (command git rev-parse --is-inside-git-dir ^/dev/null) -eq "true"
-        if test (command git rev-parse --is-inside-work-tree ^/dev/null) -eq "true"
+    if [ (command git rev-parse --is-inside-git-dir ^/dev/null) = "true" ]
+        if [ (command git rev-parse --is-inside-work-tree ^/dev/null) = "true" ]
             set bare "BARE:"
         else
             set branch "GIT_DIR!"
         end
     else if [ (command git rev-parse --is-inside-work-tree ^/dev/null) = "true" ]
+
         command git diff --no-ext-diff --ignore-submodules \
                  --quiet --exit-code; or set outstanding '◯ '
-        if command git rev-parse --quiet --verify HEAD >/dev/null ^&1
-            command git diff-index --cached --quiet \
-                           --ignore-submodules HEAD --; or set head '◉ '
-        else
-            set head '#'
+        if not [ (command git diff --stat --cached | wc -c | sed 's/\s//g') = '0' ]
+            set head '◉ '
+        end
+
+        if not command git rev-parse --quiet --verify HEAD >/dev/null ^&1
+            set head "#$head"
         end
     end
 
