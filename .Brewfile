@@ -15,6 +15,7 @@ brew 'colordiff'
 brew 'ghc'
 brew 'cabal-install'
 brew 'htop'
+brew 'figlet'
 
 cask 'vagrant'
 
