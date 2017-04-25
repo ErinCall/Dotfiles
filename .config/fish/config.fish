@@ -38,7 +38,7 @@ alias vb $EDITOR" ~/.config/fish/config.fish"
 alias sb ". ~/.config/fish/config.fish"
 alias read_silently "perl -MTerm::ReadKey -e 'ReadMode(q[noecho]); while (<>) {}; ReadMode(0)'"
 alias now "date -u '+%Y%m%d%H%M%S'"
-alias ll 'ls -l'
+alias ll 'ls -l -h'
 alias glorom 'glorm origin/master'
 
 if [ -x (which ipconfig) ]
