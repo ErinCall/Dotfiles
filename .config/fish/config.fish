@@ -35,7 +35,7 @@ set -g -x PAGER 'less'
 set -g -x LESS '-FRX'
 
 alias vb $EDITOR" ~/.config/fish/config.fish"
-alias sb ". ~/.config/fish/config.fish"
+alias sb "source ~/.config/fish/config.fish"
 alias read_silently "perl -MTerm::ReadKey -e 'ReadMode(q[noecho]); while (<>) {}; ReadMode(0)'"
 alias now "date -u '+%Y%m%d%H%M%S'"
 alias ll 'ls -l -h'
