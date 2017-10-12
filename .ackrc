@@ -8,3 +8,4 @@
 --type-set=markdown=.md,.mkd,.markdown,.mmd,.pdc
 --ignore-dir=node_modules
 --ignore-dir=vendor
+--ignore-dir=.build
