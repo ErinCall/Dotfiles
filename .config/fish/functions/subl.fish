@@ -10,6 +10,22 @@ function subl
 
     for arg in $argv
         if begin
+            [ "$arg" = "project" ]
+            or [ "$arg" = "proj" ]
+        end
+            set -l path (pwd)
+
+            if not [ -e ".sublime-project/project.sublime-project" ]
+                # Make the project
+                mkdir -p ./.sublime-project
+
+                echo "{\"folders\":[{\"path\":\""$path"\"}]}" > ".sublime-project/project.sublime-project"
+                echo "{}" > ".sublime-project/project.sublime-project"
+            end
+
+            set translated_argv "--project" ".sublime-project/project.sublime-project" "--new-window" "--add" "."
+
+        else if begin
             # is $arg a number, and small enough to be an index of $c?
             echo $arg | egrep '^[0-9]+$' >/dev/null ^&1
             and math $arg '<=' (count $c) >/dev/null
