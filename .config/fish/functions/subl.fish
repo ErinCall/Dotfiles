@@ -11,7 +11,7 @@ function subl
     for arg in $argv
         if begin
             [ "$arg" = "project" ]
-            or [ "$arg" = "proj" ]
+            or [ "$arg" = "pro" ]
         end
             set -l path (pwd)
 
