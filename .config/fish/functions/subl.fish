@@ -14,16 +14,17 @@ function subl
             or [ "$arg" = "pro" ]
         end
             set -l path (pwd)
+            set -l project (echo $path | sed 's|.*/||')
 
-            if not [ -e ".sublime-project/project.sublime-project" ]
+            if not [ -e ".sublime-project/$project.sublime-project" ]
                 # Make the project
                 mkdir -p ./.sublime-project
 
-                echo "{\"folders\":[{\"path\":\""$path"\"}]}" > ".sublime-project/project.sublime-project"
-                echo "{}" > ".sublime-project/project.sublime-project"
+                echo "{\"folders\":[{\"path\":\""$path"\"}]}" > ".sublime-project/$project.sublime-project"
+                echo "{}" > ".sublime-project/$project.sublime-project"
             end
 
-            set translated_argv "--project" ".sublime-project/project.sublime-project" "--new-window" "--add" "."
+            set translated_argv "--project" ".sublime-project/$project.sublime-project" "--new-window" "--add" "."
 
         else if begin
             # is $arg a number, and small enough to be an index of $c?
