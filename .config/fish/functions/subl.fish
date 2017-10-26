@@ -14,7 +14,7 @@ function subl
             or [ "$arg" = "pro" ]
         end
             set -l path (pwd)
-            set -l project (echo $path | sed 's|.*/||')
+            set -l project (basename $path)
 
             if not [ -e ".sublime-project/$project.sublime-project" ]
                 # Make the project
