@@ -1,0 +1,33 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Coffee Formatter",
+		"CoffeeCompile",
+		"CoffeeScript",
+		"Cucumber",
+		"EditorConfig",
+		"Emmet",
+		"fish-shell",
+		"Git",
+		"GitHubinator",
+		"Handlebars",
+		"INI",
+		"Jade",
+		"JavaScriptNext - ES6 Syntax",
+		"Jinja2",
+		"JSHint Gutter",
+		"nginx",
+		"Package Control",
+		"Puppet",
+		"Rust Enhanced",
+		"Sass",
+		"Shell Turtlestein",
+		"TodoReview",
+		"TOML"
+	]
+}
