@@ -1,4 +1,4 @@
-function --wraps=sed sed
+function sed --wraps=sed
     if [ -x (which gsed ^/dev/null) ]
         gsed $argv
     else
