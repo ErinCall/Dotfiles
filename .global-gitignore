@@ -4,5 +4,6 @@
 .pullmeconfig
 .python-version
 .ruby-version
+.node-version
 .sublime-project
 
