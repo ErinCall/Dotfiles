@@ -12,6 +12,10 @@ eval (python -m virtualfish)
 
 set -g -x GOPATH ~/.go/
 
+# set tabwidth of 4.
+# in iTerm, at least, this'll apply to all tabs/windows but disappears on quit
+tabs -4 -T $TERM
+
 set -g -x GIT_AUTHOR_NAME 'Erin Call'
 set -g -x GIT_AUTHOR_EMAIL 'hello@erincall.com'
 set -g -x GIT_COMMITTER_NAME $GIT_AUTHOR_NAME
