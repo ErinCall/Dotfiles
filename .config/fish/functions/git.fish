@@ -125,6 +125,8 @@ function _unstaged_status_line
     case T; echo -n 'typechange'
     # U is actually "unmerged." Can non-conflict cases cause a U?
     case U; echo -n '  conflict'
+    # An unstaged added file is a new file that's been added with -N
+    case A; echo -n '     added'
     case ' ' '\?'
     case '*' # unknown state!
     echo -n '         '$state
