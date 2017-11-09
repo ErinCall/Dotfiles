@@ -34,7 +34,8 @@ if [ -x (which subl) ]
 end
 
 set -g -x PAGER 'less'
-set -g -x LESS '-FRX'
+# -x1,5 sets the tabwidth in less; obviously it can't use the term settings
+set -g -x LESS '-FRXx1,5'
 
 alias vb $EDITOR" ~/.config/fish/config.fish"
 alias sb "source ~/.config/fish/config.fish"
