@@ -6,5 +6,5 @@ function glorm
     set -q argv[2]; and set topic $argv[2]; or set topic HEAD
     set -q argv[3]; and set argv $argv[3..-1]; or set argv
 
-    git log --oneline --reverse $master..$topic $argve
+    git log --oneline --reverse $master..$topic $argv
 end
