@@ -80,8 +80,10 @@ function potentially_notify \
     set -l command_ended (date +%s)
     set -l message_icon
 
+    set -g command_duration (math "$command_ended" "-" "$command_started")
+
     if begin
-        math $command_ended - $command_started '>' 20 > /dev/null
+        math $command_duration '>' 20 > /dev/null
         and which terminal-notifier > /dev/null
     end
         if [ $last_status = 0 ]
