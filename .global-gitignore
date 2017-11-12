@@ -1,3 +1,11 @@
+# Hello! If you are editing this file, you need to make parallel edits
+# to `.config/.gitignore`. Obviously you'd prefer to have
+# `.config/.gitignore` be a symlink to this file. Unfortunately, it
+# looks like git resolves the symlink, sees that it has already read
+# this file, and doesn't re-apply its rules. At least, that's what I've
+# inferred from observed behavior. :(
+
+
 *.sw*
 .DS_Store
 *.pyc
