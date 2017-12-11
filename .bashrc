@@ -29,13 +29,7 @@ export GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL
 
 [[ -s ~/.bashrc_sources/local.sh ]] && source ~/.bashrc_sources/local.sh
 
-# kill -0 checks to see if the pid exists
-if test -f $HOME/.gpg-agent-info && kill -0 `cut -d: -f 2 $HOME/.gpg-agent-info` 2>/dev/null; then
-    GPG_AGENT_INFO=`cat $HOME/.gpg-agent-info | cut -c 16-`
-else
-# No, gpg-agent not available; start gpg-agent
-    eval `gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info`
-fi
+gpg-agent --daemon --no-grab >/dev/null 2>&1
 export GPG_TTY=`tty`
 export GPG_AGENT_INFO
 
