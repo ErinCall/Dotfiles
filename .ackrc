@@ -9,3 +9,4 @@
 --ignore-dir=node_modules
 --ignore-dir=vendor
 --ignore-dir=.build
+--ignore-dir=.sublime-project
