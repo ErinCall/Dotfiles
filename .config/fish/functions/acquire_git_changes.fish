@@ -1,4 +1,12 @@
 function acquire_git_changes
+    # sed-compatible regex for extracting the filename from a git status line.
+    # Strips the first three characters (the status information) and
+    # surrounding quote marks, if present, from filenames (Git inserts quotes
+    # if a filename has spaces, and they're problematic when expanded from a
+    # fish variable).
+    # FIXME: This regex is inadequate if a file with spaces has been renamed.
+    # NOTE: this variable is also used in the functions in git.fish
+    set -g FILENAME_FROM_STATUS_RE 's/^..."\?\(.*[^"]\)"\?/\1/'
 
     alias _first_character "sed 's/^\(.\).*/\1/'"
 # I'm using a single-character variable here for convenience at the command
@@ -28,7 +36,7 @@ function acquire_git_changes
                 set c $c $file
             end
         case '*'
-            set c $c (echo $line | sed 's/^...//')
+            set c $c (echo $line | sed $FILENAME_FROM_STATUS_RE)
         end
     end
 

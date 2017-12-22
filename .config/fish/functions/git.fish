@@ -92,7 +92,7 @@ end
 
 function _staged_status_line
     set -l line $argv[1]
-    set -l filename (echo $line | sed 's/...//')
+    set -l filename (echo $line | sed $FILENAME_FROM_STATUS_RE)
     set -l state (echo $line | sed 's/^\(.\).*/\1/')
 
     _padding green
@@ -115,7 +115,7 @@ end
 
 function _unstaged_status_line
     set -l line $argv[1]
-    set -l filename (echo $line | sed 's/...//')
+    set -l filename (echo $line | sed $FILENAME_FROM_STATUS_RE)
     set -l state (echo $line | sed 's/^.\(.\).*/\1/')
 
     _padding yellow
@@ -137,7 +137,8 @@ end
 
 function _unknown_status_line
     set -l line $argv[1]
-    set -l filename (echo $line | sed 's/...//')
+    # FILENAME_FROM_STATUS_RE is set in acquire_git_changes.fish
+    set -l filename (echo $line | sed $FILENAME_FROM_STATUS_RE)
 
     _padding red
     echo -n ' untracked'
