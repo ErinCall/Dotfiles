@@ -10,3 +10,4 @@
 --ignore-dir=vendor
 --ignore-dir=.build
 --ignore-dir=.sublime-project
+--ignore-dir=artifacts
