@@ -15,12 +15,12 @@ function fish_prompt --description "Erin's cool prompt"
 		echo -n (one_of $failure_icons) " "
 	end
 
-	# report the duration of the last command, if it was >= 1 second.
+	# report the duration of the last command, if it was >= 10 seconds.
 	# This code isn't resistant to DST changes, leap seconds, etc. WHATEVER.
 	# command_duration is set by potentially_notify in config.fish
 	if begin
 		test -n "$command_duration"
-		and not test "$command_duration" -eq 0
+		and math "$command_duration" ">" 9 >/dev/null
 	end #end begin
 		set -l minutes (math "$command_duration" '/' '60')
 		set -l seconds (math "$command_duration" '%' '60')
