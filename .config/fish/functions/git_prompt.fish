@@ -45,9 +45,8 @@ function git_prompt
 
         command git diff --no-ext-diff --ignore-submodules \
                  --quiet --exit-code; or set outstanding '◯ '
-        if not [ (command git diff --stat --cached | wc -c | sed 's/\s//g') = '0' ]
-            set head '◉ '
-        end
+        command git diff --no-ext-diff --ignore-submodules --cached \
+                 --quiet --exit-code; or set head '◉ '
 
         if not command git rev-parse --quiet --verify HEAD >/dev/null ^&1
             set head "#$head"
