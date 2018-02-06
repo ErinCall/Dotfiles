@@ -6,9 +6,9 @@ function acquire_git_changes
     # fish variable).
     # FIXME: This regex is inadequate if a file with spaces has been renamed.
     # NOTE: this variable is also used in the functions in git.fish
-    set -g FILENAME_FROM_STATUS_RE 's/^..."\?\(.*[^"]\)"\?/\1/'
+    set -g FILENAME_FROM_STATUS_RE 's/^..."?(.*[^"])"?/\1/'
 
-    alias _first_character "sed 's/^\(.\).*/\1/'"
+    alias _first_character "cut -c 1"
 # I'm using a single-character variable here for convenience at the command
 # line. `c` contains every changed (staged, outstanding, or untracked) file.
     set -g c
@@ -36,7 +36,7 @@ function acquire_git_changes
                 set c $c $file
             end
         case '*'
-            set c $c (echo $line | sed $FILENAME_FROM_STATUS_RE)
+            set c $c (echo $line | sed -E $FILENAME_FROM_STATUS_RE)
         end
     end
 

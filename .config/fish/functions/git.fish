@@ -45,8 +45,8 @@ function _git_status
     set -l unstaged_lines
     set -l unknown_lines
     for line in $short_status
-        set -l staged_state (echo $line | sed 's/^\(.\).*/\1/')
-        set -l unstaged_state (echo $line | sed 's/^.\(.\).*/\1/')
+        set -l staged_state (echo $line | cut -c 1)
+        set -l unstaged_state (echo $line | cut -c 2)
         switch $staged_state
         case '\?' ' '
         case '*'
@@ -92,8 +92,8 @@ end
 
 function _staged_status_line
     set -l line $argv[1]
-    set -l filename (echo $line | sed $FILENAME_FROM_STATUS_RE)
-    set -l state (echo $line | sed 's/^\(.\).*/\1/')
+    set -l filename (echo $line | sed -E $FILENAME_FROM_STATUS_RE)
+    set -l state (echo $line | cut -c 1)
 
     _padding green
     switch $state
@@ -115,8 +115,8 @@ end
 
 function _unstaged_status_line
     set -l line $argv[1]
-    set -l filename (echo $line | sed $FILENAME_FROM_STATUS_RE)
-    set -l state (echo $line | sed 's/^.\(.\).*/\1/')
+    set -l filename (echo $line | sed -E $FILENAME_FROM_STATUS_RE)
+    set -l state (echo $line | cut -c 2)
 
     _padding yellow
     switch $state
@@ -138,7 +138,7 @@ end
 function _unknown_status_line
     set -l line $argv[1]
     # FILENAME_FROM_STATUS_RE is set in acquire_git_changes.fish
-    set -l filename (echo $line | sed $FILENAME_FROM_STATUS_RE)
+    set -l filename (echo $line | sed -E $FILENAME_FROM_STATUS_RE)
 
     _padding red
     echo -n ' untracked'
