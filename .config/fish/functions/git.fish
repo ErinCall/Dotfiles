@@ -127,6 +127,8 @@ function _unstaged_status_line
     case U; echo -n '  conflict'
     # An unstaged added file is a new file that's been added with -N
     case A; echo -n '     added'
+    # An unstaged renamed file is a renamed file whose new name has been added with -N
+    case R; echo -n '   renamed'
     case ' ' '\?'
     case '*' # unknown state!
     echo -n '         '$state
