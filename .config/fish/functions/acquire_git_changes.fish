@@ -32,7 +32,7 @@ function acquire_git_changes
                  # is a staged copied file. In both cases we have two
                  # filenames to think about. This code will break in the
                  # inexcusable case that the old filename contained ' -> '.
-            for file in (echo $line | sed 's/^...//' | sed 's/ -> /\n/')
+            for file in (echo $line | sed 's/^...//' | perl -pe 's/ -> /\n/')
                 set c $c $file
             end
         case '*'
