@@ -1,0 +1,9 @@
+[
+    { "keys": ["ctrl+w"], "command": "delete_word", "args": {"forward": false, "sub_words": true } },
+    { "keys": ["ctrl+["], "command": "exit_insert_mode",
+        "context": [
+            { "key": "setting.command_mode", "operand": false },
+            { "key": "setting.is_widget", "operand": false }
+        ]
+    }
+]

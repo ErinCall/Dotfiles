@@ -1,0 +1,26 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Cobalt.tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".git",
+		"node_modules",
+		"bower_components",
+		"vendor"
+	],
+	"font_size": 15.0,
+	"ignored_packages":
+	[
+		"Coffee Formatter",
+		"CoffeeScript",
+		"SublimeCodeIntel"
+	],
+	"rulers":
+	[
+		78
+	],
+	"scroll_past_end": true,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"vintage_start_in_command_mode": true
+}
