@@ -11,3 +11,4 @@
 --ignore-dir=.build
 --ignore-dir=.sublime-project
 --ignore-dir=artifacts
+--ignore-dir=.nyc_output
