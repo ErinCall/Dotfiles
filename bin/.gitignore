@@ -1,0 +1,17 @@
+# Hello! If you are editing this file, you need to make parallel edits
+# to `.global-gitignore`. Obviously you'd prefer to have this file be a
+# symlink to `.global-gitignore`. Unfortunately, it looks like git
+# resolves the symlink, sees that it has already read that file, and
+# doesn't re-apply its rules. At least, that's what I've inferred from
+# observed behavior. :(
+
+
+*.sw*
+.DS_Store
+*.pyc
+.pullmeconfig
+.python-version
+.ruby-version
+.node-version
+.sublime-project
+

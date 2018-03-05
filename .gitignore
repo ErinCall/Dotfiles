@@ -1,6 +1,8 @@
 *
 !.config
 !.config/**
+!bin
+!bin/**
 
 # Negating .config/** also negates the globlal .DS_Store :|
 .DS_Store
