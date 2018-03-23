@@ -43,6 +43,7 @@ alias read_silently "perl -MTerm::ReadKey -e 'ReadMode(q[noecho]); while (<>) {}
 alias now "date -u '+%Y%m%d%H%M%S'"
 alias ll 'ls -l -h'
 alias glorom 'glorm origin/master'
+alias sp 'subl pro'
 
 if [ -x (which ipconfig) ]
     alias localip "ifconfig -l | tr ' ' '\n' | xargs -I'{}' ipconfig getifaddr '{}'"
