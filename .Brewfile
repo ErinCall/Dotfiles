@@ -25,6 +25,7 @@ brew 'nodenv'
 brew 'npm'
 brew 'rlwrap'
 brew 'terminal-notifier'
+brew 'httpie'
 
 cask 'vagrant'
 
