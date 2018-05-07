@@ -6,7 +6,8 @@
 		".git",
 		"node_modules",
 		"bower_components",
-		"vendor"
+		"vendor",
+		"fastlane/output_data"
 	],
 	"font_size": 15.0,
 	"ignored_packages":
