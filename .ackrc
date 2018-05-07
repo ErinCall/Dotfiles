@@ -11,4 +11,6 @@
 --ignore-dir=.build
 --ignore-dir=.sublime-project
 --ignore-dir=artifacts
+--ignore-dir=coverage
 --ignore-dir=.nyc_output
+--ignore-dir=fastlane/output_data
