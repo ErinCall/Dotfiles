@@ -1,9 +1,9 @@
 set PATH /usr/local/bin $PATH
 set PATH ~/bin $PATH
-set PATH node_modules/.bin $PATH
 
 status --is-interactive; and . (rbenv init -|psub)
 status --is-interactive; and . (nodenv init -|psub)
+set PATH node_modules/.bin $PATH
 
 set PATH bin $PATH
 set PATH ~/.go/bin $PATH
