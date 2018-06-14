@@ -1,3 +1,2 @@
-update-notifier-npm.json
-update-notifier-nodemon.json
+update-notifier*.json
 nodemon.json
