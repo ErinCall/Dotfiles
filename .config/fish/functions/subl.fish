@@ -1,4 +1,4 @@
-function subl
+function subl --wraps=~/bin/subl
     set -l translated_argv
 
     # Fish's `for in` doesn't work with an empty list, since it just comes out
