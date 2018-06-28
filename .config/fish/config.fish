@@ -43,6 +43,7 @@ alias read_silently "perl -MTerm::ReadKey -e 'ReadMode(q[noecho]); while (<>) {}
 alias now "date -u '+%Y%m%d%H%M%S'"
 alias ll 'ls -l -h'
 alias sp 'subl pro'
+alias unlock_gpg 'echo "" | gpg --sign >/dev/null'
 
 if [ -x (which ipconfig) ]
     alias localip "ifconfig -l | tr ' ' '\n' | xargs -I'{}' ipconfig getifaddr '{}'"
