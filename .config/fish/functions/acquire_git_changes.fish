@@ -8,7 +8,7 @@ function acquire_git_changes
     # NOTE: this variable is also used in the functions in git.fish
     set -g FILENAME_FROM_STATUS_RE 's/^..."?(.*[^"])"?/\1/'
 
-    alias _first_character "cut -c 1"
+    alias _first_two_characters "cut -c 1,2"
 # I'm using a single-character variable here for convenience at the command
 # line. `c` contains every changed (staged, outstanding, or untracked) file.
     set -g c
@@ -18,8 +18,8 @@ function acquire_git_changes
     set -l staged_files
     set -l unstaged_files
     for line in (command git status --short)
-        switch (echo $line | _first_character)
-        case M D R C A # staged files: Modified, Deleted, Renamed, Copied, or Added
+        switch (echo $line | _first_two_characters)
+        case 'M?' 'D?' 'R?' 'C?' 'A?' # staged files: Modified, Deleted, Renamed, Copied, or Added
             set staged_files $staged_files $line
         case '*'
             set unstaged_files $unstaged_files $line
@@ -27,11 +27,12 @@ function acquire_git_changes
     end
 
     for line in $staged_files $unstaged_files
-        switch (echo $line | _first_character)
-        case R C # 'R' in a short-status indicates a staged renamed file. 'C'
-                 # is a staged copied file. In both cases we have two
-                 # filenames to think about. This code will break in the
-                 # inexcusable case that the old filename contained ' -> '.
+        switch (echo $line | _first_two_characters)
+             # 'R' in a short-status indicates a renamed file. 'C' is a staged
+             # copied file. In both cases we have two filenames to think
+             # about. This code will break in the inexcusable case that the
+             # old filename contained ' -> '.
+        case 'R?' '?R' 'C?' '?C'
             for file in (echo $line | sed 's/^...//' | perl -pe 's/ -> /\n/')
                 set c $c $file
             end
