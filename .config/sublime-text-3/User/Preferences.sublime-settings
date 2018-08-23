@@ -7,7 +7,9 @@
 		"node_modules",
 		"bower_components",
 		"vendor",
-		"fastlane/output_data"
+		"fastlane/output_data",
+		"tmp",
+		".sublime-project"
 	],
 	"font_size": 15.0,
 	"ignored_packages":
