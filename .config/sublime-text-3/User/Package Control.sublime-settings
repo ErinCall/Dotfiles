@@ -8,6 +8,7 @@
 	"installed_packages":
 	[
 		"AdvancedNewFile",
+		"API Blueprint",
 		"Coffee Formatter",
 		"CoffeeCompile",
 		"CoffeeScript",
@@ -21,7 +22,6 @@
 		"Handlebars",
 		"INI",
 		"Jade",
-		"JavaScriptNext - ES6 Syntax",
 		"Jinja2",
 		"JSHint Gutter",
 		"JSX",
