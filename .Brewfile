@@ -26,6 +26,7 @@ brew 'npm'
 brew 'rlwrap'
 brew 'terminal-notifier'
 brew 'httpie'
+brew 'bat'
 
 cask 'vagrant'
 
