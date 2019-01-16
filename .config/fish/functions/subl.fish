@@ -3,7 +3,7 @@ function subl --wraps=~/bin/subl
 
     # Fish's `for in` doesn't work with an empty list, since it just comes out
     # as `for arg in`, which is a syntax error
-    if math (count $argv) '<' 1 >/dev/null
+    if test (count $argv) -lt 1 >/dev/null
         command subl
         return $status
     end
@@ -29,7 +29,7 @@ function subl --wraps=~/bin/subl
         else if begin
             # is $arg a number, and small enough to be an index of $c?
             echo $arg | egrep '^[0-9]+$' >/dev/null ^&1
-            and math $arg '<=' (count $c) >/dev/null
+            and test $arg -le (count $c) >/dev/null
         end
             set translated_argv $translated_argv $c[$arg]
         # is $arg a fish array slice?

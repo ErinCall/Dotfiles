@@ -87,7 +87,7 @@ function potentially_notify \
     set -g command_duration (math "$command_ended" "-" "$command_started")
 
     if begin
-        math $command_duration '>' 20 > /dev/null
+        test $command_duration -gt 20 > /dev/null
         and which terminal-notifier > /dev/null
     end
         if [ $last_status = 0 ]

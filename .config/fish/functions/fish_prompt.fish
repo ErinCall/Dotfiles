@@ -20,9 +20,9 @@ function fish_prompt --description "Erin's cool prompt"
 	# command_duration is set by potentially_notify in config.fish
 	if begin
 		test -n "$command_duration"
-		and math "$command_duration" ">" 9 >/dev/null
+		and test "$command_duration" -gt 9 >/dev/null
 	end #end begin
-		set -l minutes (math "$command_duration" '/' '60')
+		set -l minutes (math --scale=0 "$command_duration" '/' '60')
 		set -l seconds (math "$command_duration" '%' '60')
 		set    seconds (printf '%02d' $seconds )
 		echo -n "[$minutes:$seconds] "
