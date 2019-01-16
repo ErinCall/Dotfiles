@@ -9,8 +9,8 @@ function acquire_git_changes
     set -g FILENAME_FROM_STATUS_RE 's/^..."?(.*[^"])"?/\1/'
 
     alias _first_two_characters "cut -c 1,2"
-# I'm using a single-character variable here for convenience at the command
-# line. `c` contains every changed (staged, outstanding, or untracked) file.
+    # I'm using a single-character variable here for convenience at the command
+    # line. `c` contains every changed (staged, outstanding, or untracked) file.
     set -g c
 
     # this un/staged dance is to get the short-status list in the same order
