@@ -37,6 +37,8 @@ set -g -x PAGER 'less'
 # -x1,5 sets the tabwidth in less; obviously it can't use the term settings
 set -g -x LESS '-FRXx1,5'
 
+set -g -x BAT_CONFIG_PATH ~/.config/bat/bat.conf
+
 alias vb $EDITOR" ~/.config/fish/config.fish"
 alias sb "source ~/.config/fish/config.fish"
 alias read_silently "perl -MTerm::ReadKey -e 'ReadMode(q[noecho]); while (<>) {}; ReadMode(0)'"
