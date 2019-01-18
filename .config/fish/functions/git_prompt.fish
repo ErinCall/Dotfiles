@@ -1,5 +1,5 @@
 function git_prompt
-    set -l gitdir (command git rev-parse --git-dir ^/dev/null)
+    set -l gitdir (command git rev-parse --git-dir 2>/dev/null)
     if [ $status != 0 ]
         return
     end
@@ -30,25 +30,25 @@ function git_prompt
             set rebasing "|BISECTING"
         end
 
-        set branch (command git symbolic-ref HEAD ^/dev/null;
-                    or echo (cut -c1-7 .git/HEAD ^/dev/null)...)
+        set branch (command git symbolic-ref HEAD 2>/dev/null;
+                    or echo (cut -c1-7 .git/HEAD 2>/dev/null)...)
         set branch (echo $branch | sed 's:refs/heads/::')
     end
 
-    if [ (command git rev-parse --is-inside-git-dir ^/dev/null) = "true" ]
-        if [ (command git rev-parse --is-inside-work-tree ^/dev/null) = "true" ]
+    if [ (command git rev-parse --is-inside-git-dir 2>/dev/null) = "true" ]
+        if [ (command git rev-parse --is-inside-work-tree 2>/dev/null) = "true" ]
             set bare "BARE:"
         else
             set branch "GIT_DIR!"
         end
-    else if [ (command git rev-parse --is-inside-work-tree ^/dev/null) = "true" ]
+    else if [ (command git rev-parse --is-inside-work-tree 2>/dev/null) = "true" ]
 
         command git diff --no-ext-diff --ignore-submodules \
                  --quiet --exit-code; or set outstanding '◯ '
         command git diff --no-ext-diff --ignore-submodules --cached \
                  --quiet --exit-code; or set head '◉ '
 
-        if not command git rev-parse --quiet --verify HEAD >/dev/null ^&1
+        if not command git rev-parse --quiet --verify HEAD >/dev/null 2>&1
             set head "#$head"
         end
     end

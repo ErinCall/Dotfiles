@@ -21,7 +21,7 @@ set -g -x GIT_AUTHOR_EMAIL 'hello@erincall.com'
 set -g -x GIT_COMMITTER_NAME $GIT_AUTHOR_NAME
 set -g -x GIT_COMMITTER_EMAIL $GIT_AUTHOR_EMAIL
 
-gpg-agent --daemon --no-grab >/dev/null ^&1
+gpg-agent --daemon --no-grab >/dev/null 2>&1
 set -g -x GPG_TTY (tty)
 
 set -g -x NOSE_REDNOSE '1'
@@ -66,7 +66,7 @@ alias gc 'git commit'
 alias gap 'git add --patch'
 alias glorom 'glorm origin/master'
 
-alias cb 'git symbolic-ref HEAD ^/dev/null | sed "s:refs/heads/::"'
+alias cb 'git symbolic-ref HEAD 2>/dev/null | sed "s:refs/heads/::"'
 
 set -g success_icons 😏 👏 🙌 😘 👻 🎉 🙏 😎 🍩 👌 🌟 🎊 ✨
 set -g failure_icons 😤 😒 😧 💔 🔥 ❌ 😱 😰 😨 😩 😵 😡 😖
