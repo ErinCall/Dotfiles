@@ -15,6 +15,7 @@
 	"git_gutter_show_line_annotation": false,
 	"ignored_packages":
 	[
+		"API Blueprint",
 		"Coffee Formatter",
 		"CoffeeScript",
 		"SublimeCodeIntel"
