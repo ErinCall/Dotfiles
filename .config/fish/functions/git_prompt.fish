@@ -44,9 +44,9 @@ function git_prompt
     else if [ (command git rev-parse --is-inside-work-tree 2>/dev/null) = "true" ]
 
         command git diff --no-ext-diff --ignore-submodules \
-                 --quiet --exit-code; or set outstanding '◯ '
+                 --quiet --exit-code; or set outstanding '◯'
         command git diff --no-ext-diff --ignore-submodules --cached \
-                 --quiet --exit-code; or set head '◉ '
+                 --quiet --exit-code; or set head '◉'
 
         if not command git rev-parse --quiet --verify HEAD >/dev/null 2>&1
             set head "#$head"
