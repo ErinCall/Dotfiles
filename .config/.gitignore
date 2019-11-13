@@ -14,5 +14,6 @@
 .ruby-version
 .node-version
 .sublime-project
+.trunk
 
 htop
