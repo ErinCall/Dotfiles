@@ -6,11 +6,11 @@ status --is-interactive; and . (nodenv init -|psub)
 set PATH node_modules/.bin $PATH
 
 set PATH bin $PATH
-set PATH ~/.go/bin $PATH
+set PATH ~/go/bin $PATH
 
 eval (python -m virtualfish)
 
-set -g -x GOPATH ~/.go/
+set -g -x GOPATH ~/go/
 
 # set tabwidth of 4.
 # in iTerm, at least, this'll apply to all tabs/windows but disappears on quit
