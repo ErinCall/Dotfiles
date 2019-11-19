@@ -27,6 +27,7 @@ brew 'rlwrap'
 brew 'terminal-notifier'
 brew 'httpie'
 brew 'bat'
+brew 'websocat'
 
 cask 'vagrant'
 
