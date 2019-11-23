@@ -15,7 +15,6 @@
 	"git_gutter_show_line_annotation": false,
 	"ignored_packages":
 	[
-		"0_package_control_loader",
 		"API Blueprint",
 		"Coffee Formatter",
 		"CoffeeScript",
