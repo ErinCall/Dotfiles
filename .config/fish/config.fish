@@ -37,6 +37,11 @@ set -g -x PAGER 'less'
 # -x1,5 sets the tabwidth in less; obviously it can't use the term settings
 set -g -x LESS '-FRXx1,5'
 
+# OSX Catalina switched the default shell to zsh. That's fine, but sometimes I
+# want to launch bash for testing purposes. I don't need to be notified about
+# the change every time I do that.
+set -g -x BASH_SILENCE_DEPRECATION_WARNING 1
+
 set -g -x BAT_CONFIG_PATH ~/.config/bat/bat.conf
 
 alias vb $EDITOR" ~/.config/fish/config.fish"
