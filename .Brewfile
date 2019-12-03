@@ -28,6 +28,7 @@ brew 'terminal-notifier'
 brew 'httpie'
 brew 'bat'
 brew 'websocat'
+brew 'telnet'
 
 cask 'vagrant'
 
