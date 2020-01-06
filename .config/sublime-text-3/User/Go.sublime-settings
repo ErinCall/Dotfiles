@@ -1,4 +1,4 @@
 {
     "translate_tabs_to_spaces": false,
-    "rulers": [100]
+    "rulers": [100, 125]
 }
