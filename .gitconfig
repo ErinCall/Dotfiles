@@ -23,7 +23,7 @@
     plog = !git lg
     dif = "diff -p --stat --no-prefix --patience -M -C -C"
     sho = "show -p --stat --no-prefix --patience -M -C -C --ext-diff"
-	praise = blame
+    praise = blame
     stache = !git -c commit.gpgsign=false stash
 
 [color "status"]
@@ -32,11 +32,11 @@
 [help]
     autocorrect = 12
 [core]
-	excludesfile = ~/.global-gitignore
-	pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+    excludesfile = ~/.global-gitignore
+    pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [push]
-	default = current
+    default = current
 [commit]
-	gpgsign = true
+    gpgsign = true
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
