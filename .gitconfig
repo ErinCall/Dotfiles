@@ -36,8 +36,6 @@
 	pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [push]
 	default = current
-[pullme]
-	personal = ecall
 [commit]
 	gpgsign = true
 [url "git@github.com:"]
