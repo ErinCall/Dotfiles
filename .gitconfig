@@ -5,16 +5,14 @@
     oldHighlight = red bold 52
     newNormal = green bold
     newHighlight = green bold 22
-
+[color "status"]
+    changed = yellow
+    header =
 [pager]
     color = true
 
 [status]
     submodulesummary = true
-
-[rerere]
-    enabled = true
-
 [diff]
     noprefix = true
 
@@ -26,17 +24,17 @@
     praise = blame
     stache = !git -c commit.gpgsign=false stash
 
-[color "status"]
-    changed = yellow
-    header =
-[help]
-    autocorrect = 12
 [core]
     excludesfile = ~/.global-gitignore
     pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+[help]
+    autocorrect = 12
 [push]
     default = current
 [commit]
     gpgsign = true
+[rerere]
+    enabled = true
+
 [url "git@github.com:"]
     insteadOf = https://github.com/
