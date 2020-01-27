@@ -1,46 +1,46 @@
 [user]
-    name = Erin Call
-    email = hello@erincall.com
+	name = Erin Call
+	email = hello@erincall.com
 [include]
-    path = ~/.local.gitconfig
+	path = ~/.local.gitconfig
 
 [color]
-    ui = auto
+	ui = auto
 [color "diff-highlight"]
-    oldNormal = red bold
-    oldHighlight = red bold 52
-    newNormal = green bold
-    newHighlight = green bold 22
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
 [color "status"]
-    changed = yellow
-    header =
+	changed = yellow
+	header =
 [pager]
-    color = true
+	color = true
 
 [status]
-    submodulesummary = true
+	submodulesummary = true
 [diff]
-    noprefix = true
+	noprefix = true
 
 [alias]
-    lg = "log --graph --format='%C(yellow)%h%C(reset) %C(auto)%d%C(reset) %s %C(green)<%an>%C(reset) %C(bold blue)%cr%C(reset)'"
-    plog = !git lg
-    dif = "diff -p --stat --no-prefix --patience -M -C -C"
-    sho = "show -p --stat --no-prefix --patience -M -C -C --ext-diff"
-    praise = blame
-    stache = !git -c commit.gpgsign=false stash
+	lg = "log --graph --format='%C(yellow)%h%C(reset) %C(auto)%d%C(reset) %s %C(green)<%an>%C(reset) %C(bold blue)%cr%C(reset)'"
+	plog = !git lg
+	dif = "diff -p --stat --no-prefix --patience -M -C -C"
+	sho = "show -p --stat --no-prefix --patience -M -C -C --ext-diff"
+	praise = blame
+	stache = !git -c commit.gpgsign=false stash
 
 [core]
-    excludesfile = ~/.global-gitignore
-    pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+	excludesfile = ~/.global-gitignore
+	pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [help]
-    autocorrect = 12
+	autocorrect = 12
 [push]
-    default = current
+	default = current
 [commit]
-    gpgsign = true
+	gpgsign = true
 [rerere]
-    enabled = true
+	enabled = true
 
 [url "git@github.com:"]
-    insteadOf = https://github.com/
+	insteadOf = https://github.com/
