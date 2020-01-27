@@ -1,3 +1,9 @@
+[user]
+    name = Erin Call
+    email = hello@erincall.com
+[include]
+    path = ~/.local.gitconfig
+
 [color]
     ui = auto
 [color "diff-highlight"]

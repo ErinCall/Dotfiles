@@ -16,11 +16,6 @@ set -g -x GOPATH ~/go/
 # in iTerm, at least, this'll apply to all tabs/windows but disappears on quit
 tabs -4 -T $TERM
 
-set -g -x GIT_AUTHOR_NAME 'Erin Call'
-set -g -x GIT_AUTHOR_EMAIL 'hello@erincall.com'
-set -g -x GIT_COMMITTER_NAME $GIT_AUTHOR_NAME
-set -g -x GIT_COMMITTER_EMAIL $GIT_AUTHOR_EMAIL
-
 gpg-agent --daemon --no-grab >/dev/null 2>&1
 set -g -x GPG_TTY (tty)
 
