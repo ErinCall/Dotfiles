@@ -4,8 +4,8 @@
 --type-set=javascript=.js,.json,.coffee
 --type-set=jinja=.jinja
 --type-set=heist=.tpl
---ignore-dir=build
 --type-set=markdown=.md,.mkd,.markdown,.mmd,.pdc
+
 --ignore-dir=node_modules
 --ignore-dir=vendor
 --ignore-dir=.build
@@ -14,3 +14,4 @@
 --ignore-dir=coverage
 --ignore-dir=.nyc_output
 --ignore-dir=fastlane/output_data
+--ignore-dir=dist

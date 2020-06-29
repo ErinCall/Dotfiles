@@ -10,6 +10,7 @@
 		"vendor",
 		"fastlane/output_data",
 		"tmp",
+		"dist",
 		".sublime-project"
 	],
 	"font_size": 12.0,
