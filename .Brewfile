@@ -27,6 +27,7 @@ brew 'httpie'
 brew 'bat'
 brew 'websocat'
 brew 'telnet'
+brew 'awscli'
 
 cask 'vagrant'
 

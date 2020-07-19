@@ -31,6 +31,8 @@ set -g -x PAGER 'less'
 # -x1,5 sets the tabwidth in less; obviously it can't use the term settings
 set -g -x LESS '-FRXx1,5'
 
+set -g -x AWS_CONFIG_FILE ~/.config/aws-cli/config
+
 # OSX Catalina switched the default shell to zsh. That's fine, but sometimes I
 # want to launch bash for testing purposes. I don't need to be notified about
 # the change every time I do that.
