@@ -1,4 +1,5 @@
 set PATH /usr/local/bin $PATH
+set PATH /usr/local/sbin $PATH
 set PATH ~/bin $PATH
 
 status --is-interactive; and . (rbenv init -|psub)
