@@ -8,7 +8,7 @@ cd ~
 git init .
 git remote add origin git@github.com:ErinCall/Dotfiles.git
 git fetch
-git reset --hard origin/mistress
+git reset --hard origin/epitome
 git submodule update --init
 
 sudo easy_install pip
