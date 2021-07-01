@@ -8,7 +8,7 @@ set PATH node_modules/.bin $PATH
 
 set PATH bin $PATH
 set PATH ~/go/bin $PATH
-set PATH /usr/local/opt/python@3.8/libexec/bin $PATH
+set PATH /usr/local/opt/python@3.9/libexec/bin $PATH
 
 set -g -x GOPATH ~/go/
 
