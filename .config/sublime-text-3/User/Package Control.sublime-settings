@@ -3,7 +3,7 @@
 	"in_process_packages":
 	[
 		"Coffee Formatter",
-		"CoffeeScript"
+		"CoffeeScript",
 	],
 	"installed_packages":
 	[
@@ -41,5 +41,5 @@
 		"TOML",
 		"TypeScript Syntax",
 		"Wrap Plus"
-	]
+	],
 }
