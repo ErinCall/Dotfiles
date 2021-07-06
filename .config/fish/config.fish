@@ -48,6 +48,7 @@ alias now "date -u '+%Y%m%d%H%M%S'"
 alias ll 'ls -l -h'
 alias sp 'subl pro'
 alias unlock_gpg 'echo "" | gpg --sign >/dev/null'
+alias ppe 'perl -p -e'
 
 if [ -x (which ipconfig) ]
     alias localip "ifconfig -l | tr ' ' '\n' | xargs -I'{}' ipconfig getifaddr '{}'"
