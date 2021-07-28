@@ -24,13 +24,12 @@ set -g -x NOSE_REDNOSE_COLOR 'force'
 
 alias mvimf "mvim -f -c 'au VimLeave * !open -a iTerm'"
 set -g -x EDITOR vim
-if begin
-    [ -x (which subl_wait.fish) ]
-    and [ (uname) = 'Darwin' ]
-end
-    set EDITOR (which subl_wait.fish)
-else if [ -x (which subl) ]
-    set EDITOR 'subl --wait --new-window'
+if [ -x (which subl) ]
+    if [ (uname) = 'Darwin' ]
+        set EDITOR $HOME/bin/subl_wait.fish
+    else
+        set EDITOR 'subl --wait --new-window'
+    end
 end
 
 set -g -x PAGER 'less'
