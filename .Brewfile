@@ -28,6 +28,7 @@ brew 'bat'
 brew 'websocat'
 brew 'telnet'
 brew 'awscli'
+brew 'imagemagick'
 
 cask 'vagrant'
 
