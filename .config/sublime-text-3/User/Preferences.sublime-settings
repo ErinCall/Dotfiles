@@ -11,6 +11,16 @@
 		"fastlane/output_data",
 		"tmp",
 		"dist",
+		"coverage",
+		"Pods",
+		"ios/build",
+		"android/app/build",
+		".gradle",
+		".idea",
+		".cache",
+		".build",
+		".yarn",
+		"xcuserdata",
 		".sublime-project"
 	],
 	"font_size": 12.0,
@@ -30,5 +40,6 @@
 	"scroll_past_end": true,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
+	"binary_file_patterns": [ "*.hex"],
 	"vintage_start_in_command_mode": true,
 }

@@ -7,6 +7,11 @@
 --type-set=markdown=.md,.mkd,.markdown,.mmd,.pdc
 
 --ignore-dir=node_modules
+--ignore-dir=Pods
+--ignore-dir=ios/build
+--ignore-dir=android/app/build
+--ignore-dir=.gradle
+--ignore-dir=.idea
 --ignore-dir=vendor
 --ignore-dir=.build
 --ignore-dir=.sublime-project
@@ -15,3 +20,6 @@
 --ignore-dir=.nyc_output
 --ignore-dir=fastlane/output_data
 --ignore-dir=dist
+--ignore-dir=.yarn
+
+--ignore-file=is:.eslintcache
