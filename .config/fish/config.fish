@@ -24,7 +24,9 @@ set -g -x NOSE_REDNOSE_COLOR 'force'
 
 alias mvimf "mvim -f -c 'au VimLeave * !open -a iTerm'"
 set -g -x EDITOR vim
-if [ -x (which subl) ]
+if [ -x (which code) ]
+    set EDITOR "$HOME/bin/code-wait.fish"
+else if [ -x (which subl) ]
     set EDITOR 'subl --wait --new-window'
 end
 
