@@ -13,13 +13,13 @@ function git
     for arg in $argv
         if begin
             # is $arg a number, and small enough to be an index of $c?
-            echo $arg | egrep '^[0-9]+$' >/dev/null 2>&1
+            echo $arg | egrep '^[1-9][0-9]*$' >/dev/null 2>&1
             and test $arg -le (count $c) >/dev/null
         end
             set translated_argv $translated_argv $c[$arg]
         # is $arg a fish array slice?
         # TODO: bounds checking here maybe? It's obnoxiously long-winded
-        else if echo $arg | egrep '^[0-9]+\.\.[0-9]+$' >/dev/null 2>&1
+        else if echo $arg | egrep '^[1-9][0-9]*\.\.[1-9][0-9]*$' >/dev/null 2>&1
             set translated_argv $translated_argv $c[$arg]
         else
             set translated_argv $translated_argv $arg

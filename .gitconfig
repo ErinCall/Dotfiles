@@ -46,3 +46,5 @@
 	insteadOf = https://github.com/
 [init]
 	defaultBranch = epitome
+[advice]
+	detachedHead = false

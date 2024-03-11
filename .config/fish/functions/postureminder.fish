@@ -12,5 +12,5 @@ function postureminder
         end
     end
 
-    while true; terminal-notifier -title Posture -message 'spine straight, shoulders down' $sound -group postureminder; sleep (math 60 '*' 5); end
+    while true; terminal-notifier -title Posture -message 'spine straight, shoulders down' $sound -group postureminder; sleep (math 60 '*' 10); end
 end

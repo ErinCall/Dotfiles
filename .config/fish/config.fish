@@ -1,12 +1,12 @@
 set PATH /usr/local/bin $PATH
 set PATH /usr/local/sbin $PATH
-set PATH ~/bin $PATH
 
 status --is-interactive; and . (rbenv init -|psub)
 status --is-interactive; and . (nodenv init -|psub)
 set PATH node_modules/.bin $PATH
 
-set PATH bin $PATH
+set PATH ~/bin $PATH
+
 set PATH ~/go/bin $PATH
 set PATH /usr/local/opt/python@3.9/libexec/bin $PATH
 
@@ -24,11 +24,6 @@ set -g -x NOSE_REDNOSE_COLOR 'force'
 
 alias mvimf "mvim -f -c 'au VimLeave * !open -a iTerm'"
 set -g -x EDITOR vim
-if [ -x (which code) ]
-    set EDITOR 'code --wait --new-window'
-else if [ -x (which subl) ]
-    set EDITOR 'subl --wait --new-window'
-end
 
 set -g -x PAGER 'less'
 # -x1,5 sets the tabwidth in less; obviously it can't use the term settings
@@ -114,3 +109,4 @@ set -g -x LSCOLORS "Eafxcxdxbxegedabagacad"
 if [ -f $HOME/.config/fish/local.fish ]
   source $HOME/.config/fish/local.fish
 end
+
